@@ -1,0 +1,1569 @@
+{
+    "root": {
+        "data": {
+            "id": "cctktfllxnk0",
+            "created": 1626338314848,
+            "text": "总结",
+            "expandState": "expand"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cctl6isc3gg0",
+                    "created": 1626339340519,
+                    "text": "书",
+                    "expandState": "expand"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cctl6lhma7s0",
+                            "created": 1626339346402,
+                            "text": "架构整洁之道",
+                            "expandState": "collapse"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cctl6sfgyg00",
+                                    "created": 1626339361509,
+                                    "text": "概述",
+                                    "expandState": "expand"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cctl9kuqtgo0",
+                                            "created": 1626339580111,
+                                            "text": "设计和架构就是为了，用最小的人力成本来满足构建和维护该系统的需求。\n举例子在时间的迭代中，软件开发的成本越来越高，每个人的产出变低",
+                                            "expandState": "expand"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cctldw18gnc0",
+                                            "created": 1626339917905,
+                                            "text": "行为价值和架构价值谁重要？\n行为是功能，架构是软件\n区分事情的重要度\n1．重要且紧急\n2．重要不紧急\n3．不重要但紧急\n4．不重要且不紧急",
+                                            "expandState": "expand"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cctli6ychk80",
+                                    "created": 1626340255131,
+                                    "text": "编程范式",
+                                    "expandState": "expand"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cctljbnqh3s0",
+                                            "created": 1626340343738,
+                                            "text": "结构化编程",
+                                            "expandState": "expand"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cctln127ozc0",
+                                                    "created": 1626340634125,
+                                                    "text": "具有可推导性\n程序员可以用代码将一些已证明可用的结构串联起来，\n只要自行证明这些额外代码是正确的，就可以推导出整\n个程序的正确性。",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cctlyxqftko0",
+                                            "created": 1626341567253,
+                                            "text": "面向对象编程",
+                                            "expandState": "expand"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cctm1za0nko0",
+                                                    "created": 1626341805706,
+                                                    "text": "封装、继承、多态\n依赖反转\n面向对象编程就是以多态为手段来对源代码中的依赖关\n系进行控制的能力，这种能力让软件架构师可以构建出\n某种插件式架构，让高层策略性组件与底层实现性组件\n相分离，底层组件可以被编译成插件，实现独立于高层\n组件的开发和部署。",
+                                                    "layout_right_offset": {
+                                                        "x": -15,
+                                                        "y": 3
+                                                    },
+                                                    "expandState": "expand"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cctmayac1rs0",
+                                            "created": 1626342508826,
+                                            "text": "函数式编程",
+                                            "expandState": "expand"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cctmbfy1tuo0",
+                                                    "created": 1626342547265,
+                                                    "text": "不可变性",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cctmip8hhns0",
+                                            "created": 1626343116036,
+                                            "text": "总结",
+                                            "expandState": "expand"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cctmis658140",
+                                                    "created": 1626343122425,
+                                                    "text": "结构化编程是对程序控制权的直接转移的限制。\n面向对象编程是对程序控制权的间接转移的限制。\n函数式编程是对程序中赋值操作的限制。",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cctmj49zc3k0",
+                                    "created": 1626343148779,
+                                    "text": "设计原则（SOLID）",
+                                    "expandState": "expand"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cctmjo8a3z40",
+                                            "created": 1626343192211,
+                                            "text": "单一职责原则",
+                                            "expandState": "expand"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cctmk69hd3s0",
+                                            "created": 1626343231466,
+                                            "text": "开闭原则",
+                                            "expandState": "expand"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cctmkfhnsu80",
+                                            "created": 1626343251552,
+                                            "text": "里氏替换原则",
+                                            "expandState": "expand"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cctmkm85fso0",
+                                            "created": 1626343266214,
+                                            "text": "接口隔离原则",
+                                            "expandState": "expand"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cctmkrm05cw0",
+                                            "created": 1626343277936,
+                                            "text": "依赖反转",
+                                            "expandState": "expand"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cctmliot2bs0",
+                                    "created": 1626343336879,
+                                    "text": "组件构建原则",
+                                    "expandState": "expand"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "ccuejtv962o0",
+                                            "created": 1626422195562,
+                                            "text": "组件是软件的部署单元，是整个软件系统在部署过程中\n可以独立完成部署的最小实体。例：java就是jar包",
+                                            "expandState": "expand"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "ccuelpft5800",
+                                            "created": 1626422342649,
+                                            "text": "组件聚合",
+                                            "expandState": "expand"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "ccuelsa0js00",
+                                                    "created": 1626422348829,
+                                                    "text": "REP：复用/发布等同原则\n从软件设计和架构设计的角度来看，REP原则就是指组\n件中的类与模块必须是彼此紧密相关的。\n一个组件中包含的类与模块还应该是可以同时发布的。",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "ccueop8bhiw0",
+                                                    "created": 1626422577289,
+                                                    "text": "CCP：共同闭包原则\n我们应该将那些会同时修改，并且为相同目的而修改的\n类放到同一个组件中，而将不会同时修改，并且不会为\n了相同目的而修改的那些类放到不同的组件中。",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "ccuep1t49zs0",
+                                                    "created": 1626422604668,
+                                                    "text": "CRP：共同复用原则\n不要强迫一个组件的用户依赖他们不需要的东西",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "ccugjsyvp4o0",
+                                            "created": 1626427835824,
+                                            "text": "组件耦合",
+                                            "expandState": "expand"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "ccugkbh4bog0",
+                                                    "created": 1626427876109,
+                                                    "text": "无依赖环原则",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "ccugkdcn2yo0",
+                                                            "created": 1626427880192,
+                                                            "text": "组件依赖关系图中不应该出现环。\n组件结构图是不可能自上而下被设计出来的。它必须随\n着软件系统的变化而变化和扩张，而不可能在系统构建\n的最初就被完美设计出来。",
+                                                            "expandState": "expand"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "ccugnh7e3w00",
+                                                    "created": 1626428123674,
+                                                    "text": "稳定依赖原则",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "ccuh9y3svkg0",
+                                                            "created": 1626429884474,
+                                                            "text": "依赖关系必须要指向更稳定的方向。\n稳定性指标：\nFan-in：入向依赖，这个指标指代了组件外部类依赖于\n组件内部类的数量。\nFan-out：出向依赖，这个指标指代了组件内部类依赖\n于组件外部类的数量。\nI：不稳定性，I=Fan-out/（Fan-in+Fan-out）。该指\n标的范围是[0,1],I=0意味着组件是最稳定的，I=1意味着\n组件是最不稳定的。",
+                                                            "layout_right_offset": {
+                                                                "x": -9,
+                                                                "y": -12
+                                                            },
+                                                            "expandState": "expand"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "ccuhc0g7fa80",
+                                                    "created": 1626430046306,
+                                                    "text": "稳定抽象原则",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "ccuhdn8qmeo0",
+                                                            "created": 1626430174285,
+                                                            "text": "一个组件的抽象化程度应该与其稳定性保持一致。",
+                                                            "expandState": "expand"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "ccuhe37ckrk0",
+                                            "created": 1626430209029,
+                                            "text": "软件架构",
+                                            "expandState": "expand"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "ccuhflys0ow0",
+                                                    "created": 1626430328234,
+                                                    "text": "什么是软件架构",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "ccuhg1rp8x40",
+                                                            "created": 1626430362634,
+                                                            "text": "给出软件架构对于软件生命周期的影响（5个视角 开\n发，测试，部署，运维， 维护）， 以及什么是设计\n师，设计师就是资深程序员， 没有一线编码很难做好\n的设计（这个在国内的国情稍有不一样）。 好的设计\n上要实现业务（这个是本），中间要指导实现，后面要\n易于维护。 这个是自己对好的架构的理解。 Bob 给出\n自己的好的定义： 软件架构就要抓住本质的东西，与\n次要的东西分离解构。这样次要的东西的决定就可以推\n迟，到最后的有充分的 信息在做决策",
+                                                            "layout_right_offset": {
+                                                                "x": -5,
+                                                                "y": 14
+                                                            },
+                                                            "expandState": "expand"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "ccuhitzrj000",
+                                                    "created": 1626430580800,
+                                                    "text": "独立性",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "ccuhixa2fts0",
+                                                            "created": 1626430587953,
+                                                            "text": "系统的用例与正常运行。系统的维护。系统的开发。系统的部署。",
+                                                            "expandState": "expand"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "ccuhjiro5k80",
+                                                    "created": 1626430634730,
+                                                    "text": "划分边界",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "ccuhjlw8l3c0",
+                                                            "created": 1626430641537,
+                                                            "text": "为了在软件架构中画边界线，我们需要先将系统分割成\n组件，其中一部分是系统的核心业务逻辑组件，而另一\n部分则是与核心业务逻辑无关但负责提供必要功能的插\n件。然后通过对源代码的修改，让这些非核心组件依赖\n于系统的核心业务逻辑组件。\n单一职责的作用就是告诉我们应该在哪里画边界线。\n其实，这也是一种对依赖反转原则（DIP）和稳定抽象\n原则（SAP）的具体应用，依赖箭头应该由底层具体实\n现细节指向高层抽象的方向。",
+                                                            "layout_right_offset": {
+                                                                "x": 12,
+                                                                "y": -12
+                                                            },
+                                                            "expandState": "expand"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "ccuhmz8jb400",
+                                                            "created": 1626430905671,
+                                                            "text": "意味着什么？"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "ccuhn3j24rk0",
+                                                                    "created": 1626430915015,
+                                                                    "text": "边界意味着隔离，意味着修改不会传染，不会级联修\n改。隔离粒度（源代码，发布单元，进程）"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "ccuhorncqns0",
+                                                    "created": 1626431045881,
+                                                    "text": "业务逻辑"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "ccuhouezy3s0",
+                                                            "created": 1626431051906,
+                                                            "text": "软件的核心就是解决业务,那么什么是业务？ 模型和场\n景。业务也分层次（低层的和高层的），同样低层的依\n赖高层，但是怎么确定谁高谁低呢？\n\n业务逻辑应该保持纯净，不要掺杂用户界面或者所使用\n的数据库相关的东西。业务逻辑应该是系统中最独立、\n复用性最高的代码。",
+                                                            "layout_right_offset": {
+                                                                "x": 6,
+                                                                "y": 22
+                                                            }
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "ccuhso95rvk0",
+                                                    "created": 1626431351949,
+                                                    "text": "整洁架构"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "ccuj0kjsppc0",
+                                                            "created": 1626434791908,
+                                                            "text": "Entity(模型)/场景/API/外部各种适配器（UI,BD,controller,storage...）\n依赖规则，外部依赖内部，内部不依赖外部。 \n层次越往内，其抽象和策略的层次越高，同时软件的抽\n象程度就越高，其包含的高层策略就越多。最内层的圆\n中包含的是最通用、最高层的策略，最外层的圆包含的\n是最具体的实现细节。",
+                                                            "layout_right_offset": {
+                                                                "x": 3,
+                                                                "y": 49
+                                                            }
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "ccuj43xrig00",
+                                                    "created": 1626435069204,
+                                                    "text": "不完全边界",
+                                                    "layout_right_offset": {
+                                                        "x": 2,
+                                                        "y": 35
+                                                    }
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "ccuj468il2w0",
+                                                            "created": 1626435074208,
+                                                            "text": "YAGNI原则（“You Aren't Going to Need It”，意即“不要预测未来的需要”"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "ccuj6zgn5280",
+                                                            "created": 1626435294554,
+                                                            "text": "省掉最后一步。\n单向边界(策略模式)\n门面模式"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "ccujdom265c0",
+                                                    "created": 1626435819487,
+                                                    "text": "服务"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "ccujdrovxnk0",
+                                                            "created": 1626435826188,
+                                                            "text": "虽然服务化可能有助于提升系统的可扩展性和可研发\n性，但服务本身却并不能代表整个系统的架构设计。系\n统的架构是由系统内部的架构边界，以及边界之间的依\n赖关系所定义的，与系统中各组件之间的调用和通信方\n式无关。一个服务可能是一个独立组件，以系统架构边\n界的形式隔开。一个服务也可能由几个组件组成，其中\n的组件以架构边界的形式互相隔离。在极端情况下，客\n户端和服务端甚至可能会由于耦合得过于紧密而不具备\n系统架构意义上的隔离性。",
+                                                            "layout_right_offset": {
+                                                                "x": 6,
+                                                                "y": 20
+                                                            }
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "ccujewviocg0",
+                                                    "created": 1626435915837,
+                                                    "text": "测试边界"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "ccujf10o4o00",
+                                                            "created": 1626435924856,
+                                                            "text": "测试，架构的一部分。好的架构容易测试，同时测试可\n以让你设计更好,达到高内聚低耦合。 代码或者模块可\n以测试，意味着可以对象创建，可以调用，那么对象就\n不依赖别人创建，而这些不正是我们松耦合。而对象本\n身作用，以及验证， 也就是高聚合",
+                                                            "layout_right_offset": {
+                                                                "x": -29,
+                                                                "y": 16
+                                                            }
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "ccujif0j2a80",
+                                                    "created": 1626436190414,
+                                                    "text": "嵌入式架构"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "ccujixdisp40",
+                                                            "created": 1626436230382,
+                                                            "text": "嵌入式的软件，也应该遵循clean 架构。感觉随着芯片\n的便宜，更多嵌入式开发都变成通用软件开发，嵌入式\n软件变为通用软件",
+                                                            "layout_right_offset": {
+                                                                "x": -18,
+                                                                "y": 26
+                                                            }
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "ccujk0ipg9s0",
+                                            "created": 1626436315590,
+                                            "text": "实现细节"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "ccujk2q51io0",
+                                                    "created": 1626436320393,
+                                                    "text": "在开发的过程中，数据库、web、应用程序框架。都是\n次要问题，主要是要知道去完成什么以你完成的业务为\n中心，找到边界，这些都是外部的可以替换的。",
+                                                    "layout_right_offset": {
+                                                        "x": 2,
+                                                        "y": 19
+                                                    }
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "ccujtn371140",
+                            "created": 1626437069996,
+                            "text": "深入理解java虚拟机"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "ccujusaeaww0",
+                            "created": 1626437159680,
+                            "text": "实现领域驱动设计",
+                            "layout_right_offset": {
+                                "x": -4,
+                                "y": 22
+                            },
+                            "expandState": "collapse"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "ccvaunnskps0",
+                                    "created": 1626513319573,
+                                    "text": "DDD入门",
+                                    "layout_right_offset": {
+                                        "x": -41,
+                                        "y": -823
+                                    }
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cczkzct3ocw0",
+                                            "created": 1626948138696,
+                                            "text": "ddd有那些好处\nddd是否适合你的项目\nddd的基础"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cczlb96czbk0",
+                                            "created": 1626949071160,
+                                            "text": "DDD将领域专家和开发人员聚集到一起，这样所开发\n的软件能够反映出领域专家的思维模型\nddd关注业务战略\n通过使用战术设计建模工具，DDD满足了软件真正的\n技术需求。",
+                                            "layout_right_offset": {
+                                                "x": 5,
+                                                "y": 33
+                                            }
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cczmpfj1hko0",
+                                    "created": 1626953003196,
+                                    "text": "领域、子域、限界上下文",
+                                    "layout_right_offset": {
+                                        "x": -40,
+                                        "y": -812
+                                    }
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cczmqqc723c0",
+                                            "created": 1626953105091,
+                                            "text": "领域"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "ccznb40jhxs0",
+                                                    "created": 1626954702144,
+                                                    "text": "领域（Domain）即是一个组织所做的事情以及其中所\n包含的一切。"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cczmqt9rl8g0",
+                                            "created": 1626953111474,
+                                            "text": "子域"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cczn9ssnb280",
+                                                    "created": 1626954599358,
+                                                    "text": "核心域"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cczn9wu9dts0",
+                                                    "created": 1626954608163,
+                                                    "text": "通用子域"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cczna5snn8g0",
+                                                    "created": 1626954627657,
+                                                    "text": "支撑子域"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cczmrmqifq00",
+                                            "created": 1626953175614,
+                                            "text": "限界上下文"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cd05dpzdt4o0",
+                                                    "created": 1627005686670,
+                                                    "text": "问题空间和解决方案空间"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cd05e0l1qe00",
+                                                    "created": 1627005709748,
+                                                    "text": "分离模型"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cd05esafcgw0",
+                                    "created": 1627005770056,
+                                    "text": "上下文映射图",
+                                    "layout_right_offset": {
+                                        "x": -11,
+                                        "y": -837
+                                    }
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cd05ghx585k0",
+                                            "created": 1627005904213,
+                                            "text": "表示方法",
+                                            "layout_right_offset": {
+                                                "x": 7,
+                                                "y": 33
+                                            }
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cd05gmugjhc0",
+                                                    "created": 1627005914935,
+                                                    "text": "比较容易的一种是画一个简单的框图来表示两个或多个\n限界上下文之间的映射关系，该框图表示了不同的限界\n上下文在解决方案空间中是如何通过集成相互关联的。",
+                                                    "layout_right_offset": {
+                                                        "x": -9,
+                                                        "y": -15
+                                                    }
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cd05hix94hc0",
+                                                    "created": 1627005984761,
+                                                    "text": "通过限界上下文集成的源代码实现来表示"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cd05kue4ieo0",
+                                            "created": 1627006244818,
+                                            "text": "解释"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cd05kwe730g0",
+                                                    "created": 1627006249176,
+                                                    "text": "上下文映射图并不是一种企业架构，也不是系统拓扑\n图。但是，它可以用于高层次的架构分析，指出诸如集\n成瓶颈之类的架构不足。上下文映射图展现了一种组织\n动态能力（organizational dynamic），它可以帮助\n我们识别出有碍项目进展的一些管理问题。",
+                                                    "layout_right_offset": {
+                                                        "x": 6,
+                                                        "y": 28
+                                                    }
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cd3u6coh1b40",
+                                            "created": 1627380316781,
+                                            "text": "在上下文之间放置\n防腐层ACL\n开放接口OHS\n发布语言PL",
+                                            "layout_right_offset": {
+                                                "x": 6,
+                                                "y": 56
+                                            }
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cd3ucru7syo0",
+                                    "created": 1627380819965,
+                                    "text": "架构",
+                                    "layout_right_offset": {
+                                        "x": 11,
+                                        "y": -809
+                                    }
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cd3udczyrwg0",
+                                            "created": 1627380866025,
+                                            "text": "六边型架构"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cd3uesszrrk0",
+                                                    "created": 1627380978796,
+                                                    "text": "分层"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cd3uex3lnpk0",
+                                                            "created": 1627380988145,
+                                                            "text": "典型的DDD系统所采用的传统分层架构，其中核心域\n只位于架构中的其中一层，其上为用户界面层（User In\nterface）和应用层（ApplicationLayer），其下是基\n础设施层（Infrastructure Layer）。"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cd3uew04f740",
+                                                    "created": 1627380985758,
+                                                    "text": "六边形架构也称为端口与适配器。对于每种外界类型，\n都有一个适配器与之相对应。外界通过应用层API与内\n部进行交互。"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cd3ukxubjgo0",
+                                                    "created": 1627381459945,
+                                                    "text": "我们不必自己实现端口"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cd3ul7o3qr40",
+                                                    "created": 1627381481338,
+                                                    "text": "按照功能需求来设计内部区域中的应用程序"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cd3vi3axv540",
+                                            "created": 1627384057852,
+                                            "text": "命令和查询"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cd3vi67lhr40",
+                                                    "created": 1627384064180,
+                                                    "text": "如果一个方法修改了对象的状态，该方法便是一个命令\n（Command），它不应该返回数据。"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cd3viiw808w0",
+                                                    "created": 1627384091790,
+                                                    "text": "如果一个方法返回了数据，该方法便是一个查询（Que\nry），此时它不应该通过直接的或间接的手段修改对象\n的状态。"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cd3w23vkm400",
+                                            "created": 1627385626382,
+                                            "text": "事件驱动架构"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cd3w2ef0fi80",
+                                                    "created": 1627385649326,
+                                                    "text": "领域事件"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cd3w9ak8ue80",
+                                    "created": 1627386189484,
+                                    "text": "实体",
+                                    "layout_right_offset": {
+                                        "x": 31,
+                                        "y": -779
+                                    }
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cd3wc2otsaw0",
+                                            "created": 1627386407439,
+                                            "text": "唯一标识"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cd3wd55g0080",
+                                                    "created": 1627386491162,
+                                                    "text": "在设计实体时，我们首先需要考虑实体的本质特征，特\n别是实体的唯一标识和对实体的查找，而不是一开始便\n关注实体的属性和行为。只有在对实体的本质特征有用\n的情况下，才加入相应的属性和行为",
+                                                    "layout_right_offset": {
+                                                        "x": -17,
+                                                        "y": -34
+                                                    }
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cd3wdr3ehs00",
+                                                    "created": 1627386538928,
+                                                    "text": "值对象可以用于存放实体的唯一标识。值对象是不变\n（immutable）的，这可以保证实体身份的稳定性"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cd3wcw880rk0",
+                                            "created": 1627386471739,
+                                            "text": "实体的属性和行为"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cd3wqzjo3qw0",
+                                    "created": 1627387576060,
+                                    "text": "值对象",
+                                    "layout_right_offset": {
+                                        "x": 23,
+                                        "y": -788
+                                    }
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cd3wst5c4p40",
+                                            "created": 1627387718862,
+                                            "text": "当你只关心某个对象的属性时，该对象便可作为一个值对象"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cd3wt6m6mt40",
+                                            "created": 1627387748177,
+                                            "text": "特征"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cd3wtgzj6b40",
+                                                    "created": 1627387770752,
+                                                    "text": "当你决定一个领域概念是否是一个值对象时，你需要考\n虑它是否拥有以下特征：\n• 它度量或者描述了领域中的一件东西。\n• 它可以作为不变量。\n• 它将不同的相关的属性组合成一个概念整体（Conceptual Whole）。\n• 当度量和描述改变时，可以用另一个值对象予以替换。\n• 它可以和其他值对象进行相等性比较。\n• 它不会对协作对象造成副作用[Evans]。",
+                                                    "layout_right_offset": {
+                                                        "x": -4,
+                                                        "y": -19
+                                                    }
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cd3x5xqxw3c0",
+                                            "created": 1627388747608,
+                                            "text": "最小化集成"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cd3x6396qxk0",
+                                                    "created": 1627388759595,
+                                                    "text": "这样的好处是可以达到最小化集成，即可以最小化下游\n模型中用于管理职责的属性数目。使用不变的值对象使\n得我们做更少的职责假设",
+                                                    "layout_right_offset": {
+                                                        "x": -33,
+                                                        "y": -25
+                                                    }
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cd4e8iqfptc0",
+                                            "created": 1627436908887,
+                                            "text": "标准类型"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cd4e8ndfauw0",
+                                                    "created": 1627436918984,
+                                                    "text": "这些静态创建的值对象在消费限界上下文中是永远不会\n被更新的。（枚举接口报错）",
+                                                    "expandState": "expand"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cd4ebomctuw0",
+                                            "created": 1627437156793,
+                                            "text": "测试值对象"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cd5hrjjgl2o0",
+                                                    "created": 1627548422847,
+                                                    "text": "在创建测试时，我们应该保证领域专家能够读懂这些测\n试，即测试应该具有领域含义。"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cd5i6fjcz1s0",
+                                            "created": 1627549589597,
+                                            "text": "持久化"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cd5id2kfgo00",
+                                    "created": 1627550109912,
+                                    "text": "领域服务",
+                                    "layout_right_offset": {
+                                        "x": 4,
+                                        "y": -800
+                                    }
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cd5j1t2oplk0",
+                                            "created": 1627552048352,
+                                            "text": "区别应用服务",
+                                            "layout_right_offset": {
+                                                "x": 10,
+                                                "y": -49
+                                            }
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cd5j328o6pc0",
+                                                    "created": 1627552146670,
+                                                    "text": "应用服务是领域模型很自然的客户方，进而也是领域服\n务的客户方。"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cd5j1x5oyc80",
+                                                    "created": 1627552057241,
+                                                    "text": "在应用服务中，我们并不会处理业务逻辑，但是领域服\n务却恰恰是处理业务逻辑的。"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cd5j3nzp5940",
+                                            "created": 1627552194016,
+                                            "text": "作用",
+                                            "layout_right_offset": {
+                                                "x": 16,
+                                                "y": -64
+                                            }
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cd5j3z3edcg0",
+                                                    "created": 1627552218185,
+                                                    "text": "你可以使用领域服务来：\n• 执行一个显著的业务操作过程。\n• 对领域对象进行转换。\n• 以多个领域对象作为输入进行计算，结果产生一个值\n对象。",
+                                                    "layout_right_offset": {
+                                                        "x": 24,
+                                                        "y": 2
+                                                    }
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cd5nqqt1keg0",
+                                            "created": 1627565286959,
+                                            "text": "建模"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cd5nu9a6fbs0",
+                                                    "created": 1627565562270,
+                                                    "text": "1.多个领域之间的交互产生领域服务\n2.impl只有在依赖倒置的时候需要，平常可省略\n3.为领域服务创建一个不至于导致贫血领域模型的迷你\n层是值得的\n4.在应用服务中，我们关心的是事务和安全，但是这些\n不应该出现在领域服务中。",
+                                                    "layout_right_offset": {
+                                                        "x": 9,
+                                                        "y": -19
+                                                    }
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cd5nye8msjs0",
+                                    "created": 1627565886517,
+                                    "text": "领域事件",
+                                    "layout_right_offset": {
+                                        "x": 12,
+                                        "y": -830
+                                    }
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cd5o5q0gpe00",
+                                            "created": 1627566460694,
+                                            "text": "建模"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cd5o5xwp6j40",
+                                                    "created": 1627566477880,
+                                                    "text": "创建具有聚合特征的领域事件"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cd5ol44m3vk0",
+                                                    "created": 1627567666882,
+                                                    "text": "加入唯一标示"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cd652vb8afs0",
+                                            "created": 1627614196005,
+                                            "text": "保持一致性"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cd655kju43s0",
+                                                    "created": 1627614407673,
+                                                    "text": "1. 领域模型和消息设施共享持久化存储\n2. 领域模型的持久化存储和消息持久化存储由全局的X\nA事务（两阶段提交）所控制。\n3. 在领域模型的持久化存储中，创建一个特殊的存储区\n域（比如一张数据库表），该区域用于存储领域事件。"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cd665htcwzs0",
+                                    "created": 1627617222828,
+                                    "text": "模块",
+                                    "layout_right_offset": {
+                                        "x": 16,
+                                        "y": -804
+                                    }
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cd69zj27dy80",
+                                            "created": 1627628039795,
+                                            "text": "设计模块的简单原则",
+                                            "layout_right_offset": {
+                                                "x": -4,
+                                                "y": -33
+                                            }
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cd6clx8v56o0",
+                                            "created": 1627635436904,
+                                            "text": "模块分层"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cd6cyap0fy80",
+                                    "created": 1627636406548,
+                                    "text": "聚合",
+                                    "layout_right_offset": {
+                                        "x": 7,
+                                        "y": -747
+                                    }
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cd6d0vpey7k0",
+                                            "created": 1627636609013,
+                                            "text": "原则：设计小聚合"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cd6d2ey5ie80",
+                                            "created": 1627636729265,
+                                            "text": "原则：在一致性边界之内建模真正的不变条件"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cd6zd9m4jkg0",
+                                            "created": 1627699644077,
+                                            "text": "原则：通过唯一标识引用其他聚合"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cd6zgie5k7c0",
+                                            "created": 1627699898279,
+                                            "text": "原则：在边界之外使用最终一致性"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cd6zxqnf80o0",
+                                                    "created": 1627701248444,
+                                                    "text": "对于一个用例，问问是否应该由执行该用例的用户来保\n证数据的一致性。如果是，请使用事务一致性，当然此\n时依然需要遵循其他聚合原则。如果需要其他用户或者\n系统来保证数据一致性，请使用最终一致性。"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cd6zyaqsa800",
+                                            "created": 1627701292183,
+                                            "text": "打破原则的理由"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cd6zye3p0wg0",
+                                                    "created": 1627701299494,
+                                                    "text": "理由之一：方便用户界面"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cd705ww8p7k0",
+                                                    "created": 1627701888952,
+                                                    "text": "理由之二：缺乏技术机制"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cd706jjwypc0",
+                                                    "created": 1627701938272,
+                                                    "text": "理由之三：全局事务"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cd706q3w5i80",
+                                                    "created": 1627701952541,
+                                                    "text": "理由之四：查询性能"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cd75mb4zyu80",
+                                    "created": 1627717279332,
+                                    "text": "工厂",
+                                    "layout_right_offset": {
+                                        "x": 0,
+                                        "y": -660
+                                    }
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cd8nq7l9xog0",
+                                            "created": 1627869925002,
+                                            "text": "功能"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cd8nqdj89ps0",
+                                                    "created": 1627869937938,
+                                                    "text": "将创建复杂对象和聚合的职责分配给一个单独的对象，\n该对象本身并不承担领域模型中的职责，但是依然是领\n域设计的一部分。工厂应该提供一个创建对象的接口，\n该接口封装了所有创建对象的复杂操作过程，同时，它\n并不需要客户去引用那个实际被创建的对象。对于聚合\n来说，我们应该一次性地创建整个聚合，并且确保它的\n不变条件得到满足",
+                                                    "layout_right_offset": {
+                                                        "x": -11,
+                                                        "y": -84
+                                                    }
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cd8nrem0vlc0",
+                                                    "created": 1627870018648,
+                                                    "text": "除了创建对象之外，工厂并不需要承担领域模型中的其他职责。",
+                                                    "layout_right_offset": {
+                                                        "x": -7,
+                                                        "y": -66
+                                                    }
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cd8odleijlk0",
+                                            "created": 1627871757443,
+                                            "text": "好处"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cd8odob62o80",
+                                                    "created": 1627871763771,
+                                                    "text": "这里的工厂方法模式可以不断地重复使用。总的来说，\n它拥有以下好处：有效地表达限界上下文中的通用语\n言；减轻客户端在创建新聚合实例时的负担；确保所创\n建的实例处于正确的状态",
+                                                    "layout_right_offset": {
+                                                        "x": 3,
+                                                        "y": -31
+                                                    }
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cd8prl6wgrs0",
+                                    "created": 1627875675191,
+                                    "text": "资源库",
+                                    "layout_right_offset": {
+                                        "x": 0,
+                                        "y": -705
+                                    }
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cd8pscpjczs0",
+                                            "created": 1627875735091,
+                                            "text": "严格来讲，只有聚合才拥有资源库。如果一个限界上下\n文中没有使用聚合，那么使用资源库也没有多大意义"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cd8psli071c0",
+                                            "created": 1627875754226,
+                                            "text": "面向集合"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cd8pssacweo0",
+                                            "created": 1627875769001,
+                                            "text": "面向持久化"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cd8sqyvras80",
+                                            "created": 1627884089957,
+                                            "text": "管理事务"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cd8w5dvztzs0",
+                                    "created": 1627893683052,
+                                    "text": "集成限界上下文",
+                                    "layout_right_offset": {
+                                        "x": -6,
+                                        "y": -738
+                                    }
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cd8wa8q635c0",
+                                            "created": 1627894063636,
+                                            "text": "集成基础"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cd8wacu6ugo0",
+                                                    "created": 1627894072586,
+                                                    "text": "1.暴露api，采用rpc访问\n2.采用消息推送\n3.restful访问"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cd8wv2s17dk0",
+                                            "created": 1627895696336,
+                                            "text": "通过rest资源集成限界上下文"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cd8x03igeq80",
+                                            "created": 1627896089754,
+                                            "text": "通过消息集成限界上下文"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cd8zis1hzl40",
+                                    "created": 1627903195923,
+                                    "text": "应用程序",
+                                    "layout_right_offset": {
+                                        "x": -6,
+                                        "y": -662
+                                    }
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cd8zjd1zab40",
+                                            "created": 1627903241665,
+                                            "text": "用户界面"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cd8zs2yjke80",
+                                            "created": 1627903924967,
+                                            "text": "应用服务"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cd903t0l21k0",
+                            "created": 1627904843692,
+                            "text": "设计数据密集型应用",
+                            "layout_right_offset": {
+                                "x": -13,
+                                "y": 58
+                            }
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cdbfyhakuwo0",
+                                    "created": 1628152684026,
+                                    "text": "可靠性，可扩展性，可维护性"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cdbfyj5x9mg0",
+                                            "created": 1628152688098,
+                                            "text": "可靠性"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cdbfynq2r2o0",
+                                            "created": 1628152698024,
+                                            "text": "可扩展性"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cdbfyv1syr40",
+                                            "created": 1628152713970,
+                                            "text": "可维护性"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "default",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

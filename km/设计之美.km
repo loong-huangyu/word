@@ -1,0 +1,104 @@
+{
+    "root": {
+        "data": {
+            "id": "cag9dpjt2nc0",
+            "created": 1617673454155,
+            "text": "设计之美"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cag9e5mjto80",
+                    "created": 1617673489149,
+                    "text": "六大原则"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cag9g37de340",
+                            "created": 1617673640606,
+                            "text": "单一职责"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cag9ghf1reg0",
+                            "created": 1617673671545,
+                            "text": "迪米特法制"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cag9hir47og0",
+                            "created": 1617673752816,
+                            "text": "接口隔离"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cag9hs5q2xs0",
+                            "created": 1617673773291,
+                            "text": "里氏替换"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cag9ipx72eg0",
+                            "created": 1617673846785,
+                            "text": "依赖导致"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cag9isvmbts0",
+                            "created": 1617673853220,
+                            "text": "开闭原则"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cag9ybtsamw0",
+                    "created": 1617675069930,
+                    "text": "多组合少继承"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cag9yhx2g800",
+                            "created": 1617675083190,
+                            "text": "1.为什么不推荐继承"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cag9yylmk140",
+                            "created": 1617675119503,
+                            "text": "2.组合比继承有什么优势"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "caga0nf1yx40",
+                            "created": 1617675251889,
+                            "text": "3.怎么判断该用组合还是继承"
+                        },
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "default",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

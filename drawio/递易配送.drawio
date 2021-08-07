@@ -1,0 +1,227 @@
+<mxfile>
+    <diagram id="NPtSuq-obG-POm0rA0mk" name="第 1 页">
+        <mxGraphModel dx="1138" dy="680" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="递易配送" style="swimlane;html=1;childLayout=stackLayout;resizeParent=1;resizeParentMax=0;startSize=20;" parent="1" vertex="1">
+                    <mxGeometry x="860" y="370" width="1630" height="1110" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="递易" style="swimlane;html=1;startSize=20;" parent="2" vertex="1">
+                    <mxGeometry y="20" width="490" height="1090" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="递易运单：&lt;br&gt;选择配送方式&lt;br&gt;扫码入库&lt;br&gt;&lt;font color=&quot;#ff0080&quot;&gt;状态：配送中&lt;/font&gt;" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="3" vertex="1">
+                    <mxGeometry x="90" y="100" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="递易运单&lt;br&gt;&lt;font color=&quot;#ff3399&quot;&gt;状态：已签收&lt;/font&gt;" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="3" vertex="1">
+                    <mxGeometry x="80" y="430" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="66" value="递易运单&lt;br&gt;修改配送方式为人工配送&lt;br&gt;&lt;font color=&quot;#ff3399&quot;&gt;状态：配送中&lt;/font&gt;" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="3" vertex="1">
+                    <mxGeometry x="80" y="950" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="75" value="递易人工或者快递柜签收完成&lt;br&gt;&lt;font color=&quot;#ff3399&quot;&gt;状态：已签收&lt;/font&gt;" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="3" vertex="1">
+                    <mxGeometry x="80" y="580" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="70" value="递易运单：&lt;br&gt;修改配送方式&lt;br&gt;&lt;font color=&quot;#ff3399&quot;&gt;状态：配送中&lt;/font&gt;" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="3" vertex="1">
+                    <mxGeometry x="80" y="200" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="82" value="订单超过3天未签收&lt;br&gt;&lt;font color=&quot;#ff3399&quot;&gt;状态：滞留&lt;/font&gt;" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="3" vertex="1">
+                    <mxGeometry x="80" y="720" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="86" value="递易运单：&lt;br&gt;选择配送方式&lt;br&gt;扫码入库&lt;br&gt;&lt;font color=&quot;#ff0080&quot;&gt;状态：配送中&lt;/font&gt;" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="3" vertex="1">
+                    <mxGeometry x="90" y="20" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="2" source="12" target="13" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="1.发送电子面单详情" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="16" vertex="1" connectable="0">
+                    <mxGeometry x="-0.2158" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="2" source="19" target="24" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="2" source="26" target="30" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="后台" style="swimlane;html=1;startSize=20;" parent="2" vertex="1">
+                    <mxGeometry x="490" y="20" width="680" height="1090" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="创建物流单&lt;br&gt;&lt;font color=&quot;#ff3399&quot;&gt;状态：配送中&lt;/font&gt;" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="4" vertex="1">
+                    <mxGeometry x="90" y="60" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="创建机器配送单&lt;br&gt;运输单状态：已装箱&lt;br&gt;app状态：配送中" style="whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="4" vertex="1">
+                    <mxGeometry x="460" y="60" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="4" source="13" target="19" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="2.选择配送方式为机器人配送订单" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="20" vertex="1" connectable="0">
+                    <mxGeometry x="-0.0952" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="30" value="机器配送单状态：在途&lt;br&gt;app状态：配送中" style="whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="4" vertex="1">
+                    <mxGeometry x="460" y="190" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="用户取件成功" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="4" source="32" target="39" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="机器配送单状态：到达&lt;br&gt;app状态：配送中" style="whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="4" vertex="1">
+                    <mxGeometry x="460" y="320" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="4" source="39" target="42" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="机器配送单状态：签收&lt;br&gt;app状态：已签收" style="whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="4" vertex="1">
+                    <mxGeometry x="460" y="430" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="物流单&lt;br&gt;&lt;font color=&quot;#ff3399&quot;&gt;状态：已签收&lt;/font&gt;" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="4" vertex="1">
+                    <mxGeometry x="90" y="430" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="4" source="47" target="53" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="机器配送单状态：超时未取&lt;br&gt;app状态：配送异常" style="whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="4" vertex="1">
+                    <mxGeometry x="460" y="530" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="4" source="50" target="53" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="380" y="800"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="50" value="机器配送单状态：配送失败&lt;br&gt;app状态：配送异常" style="whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="4" vertex="1">
+                    <mxGeometry x="320" y="650" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;strokeColor=#7F00FF;" parent="4" source="53" target="19" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="620" y="800"/>
+                            <mxPoint x="620" y="105"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="61" value="&lt;font color=&quot;#ff0000&quot;&gt;重新配送&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="60" vertex="1" connectable="0">
+                    <mxGeometry x="0.4751" y="2" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="63" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="4" source="53" target="62" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" value="配送异常" style="whiteSpace=wrap;html=1;fillColor=#d80073;strokeColor=#A50040;fontColor=#ffffff;" parent="4" vertex="1">
+                    <mxGeometry x="460" y="770" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="4" source="62" target="64" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="62" value="开箱取件&lt;br&gt;记录操作人" style="whiteSpace=wrap;html=1;" parent="4" vertex="1">
+                    <mxGeometry x="460" y="950" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="64" value="物流单配送方式&lt;br&gt;转人工配送&lt;br&gt;&lt;font color=&quot;#ff3399&quot;&gt;状态：配送中&lt;/font&gt;" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="4" vertex="1">
+                    <mxGeometry x="90" y="950" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="73" value="配送方式为机器人配送" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" parent="4" source="71" target="19" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="71" value="物流单配送方式修改&lt;br&gt;&lt;font color=&quot;#ff3399&quot;&gt;状态：配送中&lt;/font&gt;" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="4" vertex="1">
+                    <mxGeometry x="90" y="200" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="83" value="物流单&lt;br&gt;&lt;font color=&quot;#ff3399&quot;&gt;状态：滞留&lt;/font&gt;" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="4" vertex="1">
+                    <mxGeometry x="90" y="720" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="调度" style="swimlane;html=1;startSize=20;" parent="2" vertex="1">
+                    <mxGeometry x="1170" y="20" width="460" height="1090" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="5" source="24" target="26" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="创建调度" style="whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="5" vertex="1">
+                    <mxGeometry x="180" y="60" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="找到柜子开始配送" style="whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="5" vertex="1">
+                    <mxGeometry x="180" y="190" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="返回投柜点" style="whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="5" vertex="1">
+                    <mxGeometry x="180" y="530" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="配送失败" style="whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="5" vertex="1">
+                    <mxGeometry x="180" y="650" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="到达路点" style="whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="5" vertex="1">
+                    <mxGeometry x="180" y="320" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="5" source="26" target="28" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="等待规定时间未取件" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="5" source="28" target="36" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="2" source="42" target="43" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="68" value="3.同步电子面单状态" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="44" vertex="1" connectable="0">
+                    <mxGeometry x="0.1158" y="1" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="2" source="36" target="47" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="2" source="49" target="50" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="67" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="2" source="64" target="66" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="69" value="6.通知订单由机器配送转人工配送" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="67" vertex="1" connectable="0">
+                    <mxGeometry x="0.1128" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="72" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="2" source="70" target="71" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="74" value="&lt;font color=&quot;#ff0080&quot;&gt;2.同步订单配送方式的变更&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="72" vertex="1" connectable="0">
+                    <mxGeometry x="-0.2769" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="76" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="2" source="75" target="42" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="77" value="4.同步签收的面单" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="76" vertex="1" connectable="0">
+                    <mxGeometry x="-0.4321" y="-3" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="84" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="2" source="82" target="83" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="85" value="5.同步滞留的面单" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="84" vertex="1" connectable="0">
+                    <mxGeometry x="-0.1421" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="2" source="28" target="32" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="78" value="递易的运单" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="2520" y="420" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="79" value="CTI的物流单&lt;br&gt;用户视图" style="whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="2520" y="520" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="80" value="CTI的机器配送单&lt;br&gt;快递员视图" style="whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+                    <mxGeometry x="2520" y="610" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="81" value="调度" style="whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                    <mxGeometry x="2520" y="700" width="120" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
