@@ -1,0 +1,22 @@
+export M2_HOME=/Users/cti/soft/apache-maven-3.6.3
+export M2=$M2_HOME/bin
+export PATH=$M2:$PATH
+
+JAVA_HOME= /Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home
+PATH=$JAVA_HOME/bin:$PATH:.
+CLASSPATH=$JAVA_HOME/lib/tools.jar:$JAVA_HOME/lib/dt.jar:.
+export JAVA_HOME
+export PATH
+export CLASSPATH
+
+
+//根据前面的路径找到自己的路径（可能版本号会有些不一样）
+JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home
+CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+export JAVA_HOME
+export CLASSPATH
+export PATH=$JAVA_HOME/bin:$PATH
+//这里是你自己maven放置的路径
+MAVEN_HOME=/Users/cti/soft/apache-maven-3.6.3
+export MAVEN_HOME
+export PATH=$MAVEN_HOME/bin:$PATH
