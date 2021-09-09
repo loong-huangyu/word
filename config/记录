@@ -84,13 +84,19 @@ db.getCollection('delivery_user_address').createIndex({"mobile":1,"houseNumberId
 db.getCollection('dispatch_order').createIndex({"hiveId":1,"installedHive":1,"deleted":1})
 db.getCollection('dispatch_order').createIndex({"orderNumber":1,"logisticsOrderId":1,"installedHive":1,"deleted":1})
 
+db.getCollection('logistics_order').createIndex({"hubId":1,"createdTime":-1,"deleted":1})
+
 工作记录：
 （1）迁移园区定位到park
 （2）迁移logistics到park调用delivery
 （3）修改装箱判断到运单层
 （4）修改事件通知
 （5）旧数据的迁移
-（6）地址库的处理  
+（6）地址库的处理
+
+园区是否显示在app和小程序
+
+园区加上短信和电话的接口
 
 重要紧急
 团餐短信发送记录
@@ -112,11 +118,60 @@ db.getCollection('dispatch_order').createIndex({"orderNumber":1,"logisticsOrderI
 添加索引后没有超过100ms未解决的查询或更新解决问题
 
 
+8.27
+修改订单号和手机号只有输入超过四位才进行查询
+
+8.30
+
+导出问题
+INTERNAL_SERVER_ERROR
+返回数据时要做快照处理
+mongo全部查出来在内存内进行排序，默认32m 推荐用索引处理
+
+到站时间
+入库时间
+签收时间
+
+8.31
+替换字段
+db.getCollection('logistics_order').find({
+    "$and": [
+                {
+                    "arrivedPhoto": {
+                        "$regex": "http://cti-delivery-service-pro.oss-cn-shenzhen-internal.aliyuncs.com",
+                        "$options": "i"
+                    }
+                }
+            ]
+    }).forEach(function(rep){
+        a = rep.arrivedPhoto;
+        print("原字段："+a)        
+        b = a.replace('http://cti-delivery-service-pro.oss-cn-shenzhen-internal.aliyuncs.com', "https://cti-delivery-service-pro.cn-shenzhen.oss.aliyuncs.com");//将“m”替换为“&&&&”
+        print("替换后："+b);
+        //rep.arrivedPhoto=b;
+        //db.getCollection("logistics_order").update({_id:rep._id},{$set:{arrivedPhoto:b}}); 
+})
 
 
 
+目标完成：
+1.对接第三方接口完成开发新派件配送功能
+2.开发团餐备餐功能
+3.开发园区用户权限功能。
+
+工作质量：
+编写派件流程文档，与前端对接和测试提出的问题及时处理，快速响应并解决上线后派件功能在园区落地产生的问题，让现场的运营人员可以更好的使用开发出来的产品。
+
+综合表现：
+在按时完成安排的任务下，提前规划下个版本变更的功能，响应并解决系统使用时产生的问题，并对问题进行记录，避免问题的重复产生。
 
 
+9.8
+
+ALTER TABLE "park_zone" ADD "app_enabled" bool ;
+ALTER TABLE "park_zone" ADD "applet_enabled" bool ;
 
 
+9.9
+递易订单，根据id和订单号，修改用户手机
 
