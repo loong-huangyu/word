@@ -87,21 +87,21 @@ db.getCollection('dispatch_order').createIndex({"orderNumber":1,"logisticsOrderI
 db.getCollection('logistics_order').createIndex({"hubId":1,"createdTime":-1,"deleted":1})
 
 工作记录：
-（1）迁移园区定位到park
+已解决（1）迁移园区定位到park   
 （2）迁移logistics到park调用delivery
 （3）修改装箱判断到运单层
 （4）修改事件通知
-（5）旧数据的迁移
+已解决 （5）旧数据的迁移
 （6）地址库的处理
 
-园区是否显示在app和小程序
+已解决 园区是否显示在app和小程序
 
-园区加上短信和电话的接口
+已解决 园区加上短信和电话的接口
 
 重要紧急
 团餐短信发送记录
 
-导出访问
+已解决 导出访问
 
 8.26
 解决了线上奔溃的问题
@@ -175,3 +175,17 @@ ALTER TABLE "park_zone" ADD "applet_enabled" bool ;
 9.9
 递易订单，根据id和订单号，修改用户手机
 
+9.13
+1.完成设备管理开发
+未完成，设备音量调节
+
+contextType
+context
+
+ALTER TABLE "outer_item_category" ADD "delivery_property" int4 ;
+
+
+
+
+    回想近一年自己所做的一些工作，在这一年里我踏实工作，不断增强自己的工作能力和技术水平。把自己的热情投入到工作，努力争取做好每项工作，并在各方面表现优秀。一年来和同事在部门的领导安排下，按时按质地完成工作中的每项任务，在不断的总结中成长，在不断的完善自己。
+    我主要从事公司软件系统的开发与维护。工作上一直兢兢业业，对待工作一丝不苟，科学完成分配的任务，解决现场提出的问题，反馈产品新的需求，解决公司之前的
