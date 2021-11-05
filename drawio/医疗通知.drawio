@@ -1,0 +1,143 @@
+<mxfile host="65bd71144e">
+    <diagram id="cBRkyPAsmBq3ObGdTerz" name="第 1 页">
+        <mxGraphModel dx="898" dy="680" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="1">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="喇叭通知" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="200" y="370" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="邮箱通知" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="370" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="语音通知" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="680" y="360" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="短信通知" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="850" y="360" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="站内消息" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="370" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="预警消息" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="225" y="210" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="通知消息" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="375" y="210" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="系统消息" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="525" y="210" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="11" target="12" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="web" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="210" y="560" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="12" target="14" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="type/payload" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="210" y="700" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="message" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="210" y="930" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="16" target="17" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="robot" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="550" y="540" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="17" target="19" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="orderType" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="550" y="680" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="19" target="14" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="610" y="960"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="19" value="orderState/payload" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="550" y="820" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="23" target="24" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="SendNotificationType" style="html=1;" parent="1" vertex="1">
+                    <mxGeometry x="210" y="1110" width="150" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="SendNotificationType" style="html=1;" parent="1" vertex="1">
+                    <mxGeometry x="210" y="1240" width="150" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="通知" style="swimlane;childLayout=stackLayout;resizeParent=1;resizeParentMax=0;horizontal=0;startSize=20;horizontalStack=0;" parent="1" vertex="1">
+                    <mxGeometry x="230" y="1480" width="480" height="600" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="订单来源" style="swimlane;startSize=20;horizontal=0;" parent="30" vertex="1">
+                    <mxGeometry x="20" width="460" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="自动单" style="whiteSpace=wrap;html=1;" parent="31" vertex="1">
+                    <mxGeometry x="60" y="30" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="人工单" style="whiteSpace=wrap;html=1;" parent="31" vertex="1">
+                    <mxGeometry x="240" y="30" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="订单类型" style="swimlane;startSize=20;horizontal=0;" parent="30" vertex="1">
+                    <mxGeometry x="20" y="120" width="460" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="配送单" style="whiteSpace=wrap;html=1;" parent="32" vertex="1">
+                    <mxGeometry x="60" y="30" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="订单状态" style="swimlane;startSize=20;horizontal=0;" parent="30" vertex="1">
+                    <mxGeometry x="20" y="240" width="460" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="已下单" style="whiteSpace=wrap;html=1;" parent="33" vertex="1">
+                    <mxGeometry x="40" y="10" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="待配送" style="whiteSpace=wrap;html=1;" parent="33" vertex="1">
+                    <mxGeometry x="160" y="10" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="已确认" style="whiteSpace=wrap;html=1;" parent="33" vertex="1">
+                    <mxGeometry x="310" y="10" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="已出发" style="whiteSpace=wrap;html=1;" parent="33" vertex="1">
+                    <mxGeometry x="40" y="70" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="已到达" style="whiteSpace=wrap;html=1;" parent="33" vertex="1">
+                    <mxGeometry x="160" y="70" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="......" style="whiteSpace=wrap;html=1;" parent="33" vertex="1">
+                    <mxGeometry x="310" y="70" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="是否固话" style="swimlane;startSize=20;horizontal=0;" parent="30" vertex="1">
+                    <mxGeometry x="20" y="360" width="460" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="固话" style="whiteSpace=wrap;html=1;" parent="35" vertex="1">
+                    <mxGeometry x="60" y="30" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" value="非固话" style="whiteSpace=wrap;html=1;" parent="35" vertex="1">
+                    <mxGeometry x="250" y="30" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="通知类型" style="swimlane;startSize=20;horizontal=0;" parent="30" vertex="1">
+                    <mxGeometry x="20" y="480" width="460" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="语音" style="whiteSpace=wrap;html=1;" parent="36" vertex="1">
+                    <mxGeometry x="180" y="40" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="通知" style="whiteSpace=wrap;html=1;" parent="36" vertex="1">
+                    <mxGeometry x="330" y="40" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="退回单" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="1630" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="短信" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="290" y="2000" width="120" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

@@ -184,8 +184,528 @@ context
 
 ALTER TABLE "outer_item_category" ADD "delivery_property" int4 ;
 
+9.18 ADD
+int8
+
+ALTER TABLE "hospital_department" ADD "department_code" int8;
+
+ALTER TABLE "hospital_setting" ADD "pick_up_arrival_wait" int4;
+
+ALTER TABLE "hospital_setting" ADD "rf_id_validate_disabled" bool;
+
+ALTER TABLE "hospital_setting" ADD "scheduling_request_failed_time" int4;
+
+ALTER TABLE "hospital_setting" ADD "show_count_down" bool;
+
+ALTER TABLE "hospital_setting" ADD "wait_seconds" int4;
+
+ALTER TABLE "hospital_setting" ADD "extra_large_convert_ratio" int4;
 
 
 
-    回想近一年自己所做的一些工作，在这一年里我踏实工作，不断增强自己的工作能力和技术水平。把自己的热情投入到工作，努力争取做好每项工作，并在各方面表现优秀。一年来和同事在部门的领导安排下，按时按质地完成工作中的每项任务，在不断的总结中成长，在不断的完善自己。
-    我主要从事公司软件系统的开发与维护。工作上一直兢兢业业，对待工作一丝不苟，科学完成分配的任务，解决现场提出的问题，反馈产品新的需求，解决公司之前的
+
+
+修改字段类型
+ALTER TABLE "hospital_department" ALTER COLUMN "department_code" TYPE int8;
+alter table "member" alter COLUMN imgfileid type int using imgfileid::int ;
+
+
+9.22
+模版管理开发没法进行新增，新增了也没有效果
+
+模版管理只能修改除语音和短信外的
+
+区分驿站id
+
+
+NotificationApplication 001
+新增科室映射关系维护预警
+{1}新增{2}科室，请及时处理映射关系！
+药品管理系统新增眼科科室，请及时处理映射关系！
+
+{
+    "zoneId":"e90d7310-959c-4948-bf09-c67e93600848",
+    "number":"001",
+    "name":"新增科室映射关系维护预警",
+    "messageType":"WARNING_MESSAGE",
+    "pushChannel":"INSTATION_MESSAGE",
+    "title":"新增科室映射关系未维护",
+    "context":"{sourceSystemName}新增{name}科室，请及时处理映射关系！",
+    "disable":false,
+    "pushAccount":"DEPARTMENT_ADMINISTRATOR"
+}
+
+OutBoundOrderController 002
+呼叫机器人科室映射关系维护预警
+{1}{2}尚未维护映射关系，已影响{3}单据配送，请及时处理！
+药品管理系统眼科尚未维护映射关系，已影响e90d7310-959c-4948-bf09-c67e93600848单据配送，请及时处理！
+
+{
+    "zoneId":"e90d7310-959c-4948-bf09-c67e93600848",
+    "number":"002",
+    "name":"呼叫机器人科室映射关系维护预警",
+    "messageType":"WARNING_MESSAGE",
+    "pushChannel":"INSTATION_MESSAGE",
+    "title":"呼叫机器人科室映射关系未维护",
+    "context":"{sourceSystemName}{name}尚未维护映射关系，已影响{orderId}单据配送，请及时处理！",
+    "disable":false,
+    "pushAccount":"DEPARTMENT_ADMINISTRATOR"
+}
+
+OUTER_ITEM_CATEGORY_INIT_NOTIFICATION 003
+新增物品分类维护预警
+{1}系统新增{2}物品分类，请及时维护物品分类管理属性！
+药品管理系统新增眼科物品分类，请及时维护物品分类管理属性！
+
+{
+    "zoneId":"e90d7310-959c-4948-bf09-c67e93600848",
+    "number":"003",
+    "name":"新增物品分类维护预警",
+    "messageType":"WARNING_MESSAGE",
+    "pushChannel":"SMS_NOTIFICATION",
+    "title":"新增物品分类管理属性未维护",
+    "context":"${sourceSystemName}新增${name}物品分类，请及时维护物品分类管理属性！",
+    "disable":false,
+    "pushAccount":"GOODS_ADMINISTRATOR"
+}
+
+
+OUTER_ITEM_CATEGORY_GET_NOTIFICATION 004
+呼叫机器人物品分类管理属性维护
+{1}系统{2}分类尚未维护管理属性，已影响单据号{3}的单据配送，请及时处理！
+药品管理系统眼科分类尚未维护管理属性，已影响单据号e90d7310-959c-4948-bf09-c67e93600848的单据配送，请及时处理！
+
+{
+    "zoneId":"e90d7310-959c-4948-bf09-c67e93600848",
+    "number":"004",
+    "name":"呼叫机器人物品分类管理属性维护预警",
+    "messageType":"WARNING_MESSAGE",
+    "pushChannel":"VOICE_NOTIFICATION",
+    "title":"呼叫机器人物品分类管理系统未维护",
+    "context":"${sourceSystemName}${name}分类尚未维护管理属性，已影响${orderId}单据配送，请及时处理！",
+    "disable":false,
+    "pushAccount":"GOODS_ADMINISTRATOR"
+}
+
+OUTER_ITEM_INIT_NOTIFICATION 005
+新增物品维护预警
+{1}系统新增{2}物品字典，请及时维护物品管理属性！
+药品管理系统新增999感冒灵，请及时维护物品管理属性！
+检验科系统系统新增护理药品3物品字典，请及时维护物品管理属性！
+
+{
+    "zoneId":"e90d7310-959c-4948-bf09-c67e93600848",
+    "number":"005",
+    "name":"新增物品维护预警",
+    "messageType":"WARNING_MESSAGE",
+    "pushChannel":"INSTATION_MESSAGE",
+    "title":"新增物品管理属性未维护",
+    "context":"${sourceSystemName}新增${name}，请及时维护物品管理属性！",
+    "disable":false,
+    "pushAccount":"GOODS_MANAGEMENT"
+}
+
+OUTER_ITEM_GET_NOTIFICATION 006
+呼叫机器人物品管理属性维护预警
+{1}{2}尚未维护管理属性，已影响{3}单据配送，请及时处理！
+药品管理系统药水尚未维护管理属性，已影响e90d7310-959c-4948-bf09-c67e93600848单据配送，请及时处理！
+
+{
+    "zoneId":"e90d7310-959c-4948-bf09-c67e93600848",
+    "number":"006",
+    "name":"呼叫机器人物品管理属性维护预警",
+    "messageType":"WARNING_MESSAGE",
+    "pushChannel":"INSTATION_MESSAGE",
+    "title":"呼叫机器人物品管理系统未维护",
+    "context":"${sourceSystemName}${name}尚未维护管理属性，已影响${orderId}单据配送，请及时处理！",
+    "disable":false,
+    "pushAccount":"GOODS_MANAGEMENT"
+}
+
+OUTER_DEPARTMENT_UPDATE_NOTIFICATION 007
+科室默认配送位置变更预警
+{1}的默认呼叫/配送位置已被取消，请及时维护！！！
+眼科的默认呼叫/配送位置已被取消，请及时维护！！！
+
+{
+    "zoneId":"e90d7310-959c-4948-bf09-c67e93600848",
+    "number":"007",
+    "name":"呼叫机器人物品管理属性维护预警",
+    "messageType":"WARNING_MESSAGE",
+    "pushChannel":"INSTATION_MESSAGE",
+    "title":"呼叫机器人物品管理系统未维护",
+    "context":"${sourceSystemName}的默认呼叫/配送位置已被取消，请及时维护！！！",
+    "disable":false,
+    "pushAccount":"DEPARTMENT_ADMINISTRATOR"
+}
+
+MEDICAL_DELIVERY_ORDER_EXPIRED_NOTIFICATION 015
+配送滞留通知
+{1}发来的配送机器人已滞留{2}分钟，配送单号{3}，请及时取件！
+眼科发来的配送机器人已滞留3分钟，配送单号e90d7310-959c-4948-bf09-c67e93600848，请及时取件！
+
+{
+    "zoneId":"e90d7310-959c-4948-bf09-c67e93600848",
+    "number":"015",
+    "name":"配送滞留通知",
+    "messageType":"NOTIFICATION_MESSAGE",
+    "pushChannel":"INSTATION_MESSAGE",
+    "title":"配送滞留通知",
+    "context":"${name}发来的配送机器人已滞留${time}分钟，配送单号${orderId}，请及时取件！",
+    "disable":false
+}
+
+MEDICAL_DELIVERY_ORDER_MANUAL_PROCESSED_NOTIFICATION 016
+配送人工处理通知
+您发往{1}科室的配送机器人，单据号{2}，因异常已人工处理，请及时跟进处理结果！
+您发往眼科科室的配送机器人，单据号e90d7310-959c-4948-bf09-c67e93600848，因异常已人工处理，请及时跟进处理结果！
+
+{
+    "zoneId":"e90d7310-959c-4948-bf09-c67e93600848",
+    "number":"016",
+    "name":"配送人工处理通知",
+    "messageType":"NOTIFICATION_MESSAGE",
+    "pushChannel":"SMS_NOTIFICATION",
+    "title":"配送人工处理通知",
+    "context":"您发往{name}科室的配送机器人，单据号{orderId}，因异常已人工处理，请及时跟进处理结果！",
+    "disable":false
+}
+
+MEDICAL_RETURN_ORDER_MANUAL_PROCESSED_NOTIFICATION 017
+退回人工处理通知
+{1}科室退回的机器人，单据号{2}，因异常已人工处理，请及时跟进处理结果！
+眼科科室退回的机器人，单据号e90d7310-959c-4948-bf09-c67e93600848，因异常已人工处理，请及时跟进处理结果！
+
+{
+    "zoneId":"e90d7310-959c-4948-bf09-c67e93600848",
+    "number":"017",
+    "name":"退回人工处理通知",
+    "messageType":"NOTIFICATION_MESSAGE",
+    "pushChannel":"SMS_NOTIFICATION",
+    "title":"退回人工处理通知",
+    "context":"{name}科室退回的机器人，单据号{orderId}，因异常已人工处理，请及时跟进处理结果！",
+    "disable":false
+}
+
+MEDICAL_RETURN_ORDER_PENDING_NOTIFICATION 018
+退回通知
+{1}科室退回物品，单据号{2}，请及时查收！
+{眼科}科室退回物品，单据号{e90d7310-959c-4948-bf09-c67e93600848}，请及时查收！
+
+{
+    "zoneId":"e90d7310-959c-4948-bf09-c67e93600848",
+    "number":"018",
+    "name":"退回通知",
+    "messageType":"NOTIFICATION_MESSAGE",
+    "pushChannel":"INSTATION_MESSAGE",
+    "title":"退回通知",
+    "context":"${name}科室退回物品，单据号${orderId}，请及时查收！",
+    "disable":false
+}
+
+MEDICAL_DELIVERY_ORDER_CANCELLED_NOTIFICATION 020
+单据撤销审核配送取消通知
+发往{1}的配送任务已取消，单据号{2}，请及时接收送还物品！
+发往{眼科}的配送任务已取消，单据号{e90d7310-959c-4948-bf09-c67e93600848}，请及时接收送还物品！
+
+{
+    "zoneId":"e90d7310-959c-4948-bf09-c67e93600848",
+    "number":"020",
+    "name":"单据撤销审核配送取消通知",
+    "messageType":"NOTIFICATION_MESSAGE",
+    "pushChannel":"VOICE_NOTIFICATION",
+    "title":"单据撤销审核配送取消通知",
+    "context":"发往${name}的配送任务已取消，单据号${orderId}，请及时接收送还物品！",
+    "disable":false
+}
+
+MEDICAL_ORDER_BROKEN_QUANTITY_NOTIFICATION
+破损通知
+{
+    "zoneId":"e90d7310-959c-4948-bf09-c67e93600848",
+    "number":"024",
+    "name":"破损通知",
+    "messageType":"NOTIFICATION_MESSAGE",
+    "pushChannel":"INSTATION_MESSAGE",
+    "title":"配送破损通知",
+    "context":"您发往{name}科室的物资有破损，配送单号{orderId}，请及时补送！",
+    "disabled":false,
+    "pushAccount":""
+}
+
+
+
+
+
+
+test
+{
+    "id":"b2359466-0167-4597-8069-c77e1af8d138",
+    "name":"眼科",
+    "code":"2010",
+    "disabled":false,
+    "parentId":"dc52e530-3313-47c2-9573-6174310e1556",
+    "sourceSystemId":"3ed6ae84-42fe-478d-b0b3-8e47d0e2f58b"
+}
+
+dev
+{
+    "id":"b2359466-0167-4597-8069-c77e1af8d137",
+    "name":"眼科",
+    "code":"2010",
+    "disabled":false,
+    "parentId":"42ffws90d02-9ges-ooniwdsahjmd4sse",
+    "sourceSystemId":"99e4ee1d-3277-494b-b8ef-45fcd84cd760"
+}
+
+com.cti.service.medical.joint.domain.model.business.OuterBusiness#getEndPosition
+
+
+    fun domainList(): List<BaseDomainEvent> {
+        val eventLists = this.getLockerDistribution(60).map { it.map { it.item!!.domainEvent } }
+
+            ?.map {
+                it.inventoryList
+                    ?.filter { itemOutInfo -> Objects.nonNull(itemOutInfo.item) }
+                    ?.map { it.item!!.domainEvent }
+            }
+
+        var baseDomainEventList = mutableListOf<BaseDomainEvent>()
+        eventLists?.forEach { baseDomainEventList.addAll(it) }
+        return baseDomainEventList
+
+
+检验科系统 护理药品3 尚未维护管理属性，已影响111111160单据配送，请及时处理！
+
+检验科系统护理药品3尚未维护管理属性，已影响111111160单据配送，请及时处理！
+
+检验科系统护理药品3尚未维护管理属性，已影响111111160单据配送，请及时处理！
+
+
+1129692557529
+75991270/23854865
+
+配送：
+自动呼叫失败通知       未完成      无法找到接收人
+
+配置的DNS
+61.147.37.1
+
+到robot服务
+配置空格口：
+{
+  "context":null
+}
+滨江医院zoneId
+e460406c-325b-4fc1-b59b-0791ac13b67a
+
+添加外部物品分类
+{
+  "code": "2",
+  "disabled": false,
+  "id": "2",
+  "name": "样本",
+  "sourceSystemId": "61779e51-2bdd-4e32-b852-1144c587c8b8"
+}
+
+添加外部物品
+{
+  "barCode": "1",
+  "categoryId": "1",
+  "code": "2",
+  "disabled": false,
+  "id": "2",
+  "manufacturer": "测试",
+  "maxUnit": "个",
+  "name": "血液标本",
+  "provider": "234",
+  "sourceSystemId": "61779e51-2bdd-4e32-b852-1144c587c8b8",
+  "specification": "规格"
+}
+
+{
+  "barCode": "33",
+  "categoryId": "2",
+  "code": "3",
+  "disabled": false,
+  "id": "3",
+  "manufacturer": "测试扬州",
+  "maxUnit": "个",
+  "name": "血清标本",
+  "provider": "扬州",
+  "sourceSystemId": "61779e51-2bdd-4e32-b852-1144c587c8b8",
+  "specification": "规格"
+}
+
+
+配置一个西药房到13病区的自动配送出库订单
+/v3/zone/{zoneId}/joint/business/create
+新增业务单据信息：
+西药房： b4d7dc82-af19-4342-a31e-b4d87c42ec20
+lis系统：5d1b499b-4306-4b7b-ba75-28ef21e1f2e2
+his系统：61779e51-2bdd-4e32-b852-1144c587c8b8
+
+
+{
+    "createTime": 1634027989999,
+    "endDepartmentId": "5f2b0623-a33c-4bf7-aa77-1f4d9869e568",
+    "endUser": {
+        "id": "12332",
+        "name": "收货人"
+    },
+    "inventoryList": [
+        {
+            "count": 0,
+            "itemId": "1",
+            "itemUnit": "个"
+        }
+    ],
+    "originId": "5",
+    "sourceSystemId": "61779e51-2bdd-4e32-b852-1144c587c8b8",
+    "startDepartmentId": "b4d7dc82-af19-4342-a31e-b4d87c42ec20",
+    "startUser": {
+        "id": "34345",
+        "name": "发货人"
+    }
+}
+
+
+单据类型：
+药房呼叫单  洁
+药房配送到病区 洁
+病区退药申请    洁
+病区和体检中心配送到检验科 污
+
+各系统触发接口节点：
+ lis系统： 标本从病区送到检验科，病区“打包”操作时，同时触发“创建 / 执行”出库单两个接口
+ his系统：“发药”调用“创建”接口，打印调用“执行”接口 
+        病区提交“退药”申请，调用“创建接口”，病区打印退药单，调用“执行”接口
+健康体检系统：标本从体检中心送到检验科，体检中心“打包”操作，同时触发“创建 / 执行”出库单两个接口
+
+
+找胡禅要压力测试的工具类
+
+喇叭问题：
+喇叭的服务放在服务器的位置
+喇叭的通信协议
+
+
+是不是验收范围
+喇叭问题：
+1.设备注册到服务器
+解决方案：刁总那边的radiance平台已经集成了，在设备-》通知
+我们这边已经对接显示在院区平台
+
+2.设备上线上报设备信息，预设音频
+解决方案：在刁总那边的radiance平台上进行上报
+院区这边只进行显示
+
+3.喇叭的通信协议（喇叭配置，绑定科室）
+解决方案：院区开发完成，需要讨论方案
+-通信协议这个交互的解决
+-我们这边发送文字让那边转换成语音播报，还是我们生成语音到阿里云，让硬件播报
+---语音问题（延迟，转换后部署到阿里云需要配置网关
+---通知器处理
+---文本转语音（mp3，tts转）
+---通知器指令（协议）
+-----用那个通知器播放那个文本
+-目前喇叭是直接在radiance平台绑定了点位，我们只用将绑定的点位和科室相同就可以解决科室绑定
+
+4.后续升级维护，出问题替换，
+解决方案：需要询问刁总那边的产品，设备是否监控升级和设备是否正常（什么样是正常状态）
+
+5.播报器的在线状态
+解决方案：在刁总那边的radiance平台上，有启用的开关，是否需要实时监控是否在线
+
+
+
+创建调度配送任务参数 d51eb767-ba41-4059-8196-351ba9832433
+
+10.17
+检查lis流程，退药流程，医嘱类型检查，合单检查
+合单检查：
+	1.“退药”物品清单追加 
+	2.“发药”合并后的物品清单检查
+	3.合并后，如果单据里有物品长期医嘱，必须传长期医嘱
+
+7.30 调试机器
+8.28 检查lis流程  真实系统呼叫单  022110171601 &022110171602022	 呼叫+配送正常  洁污混合电梯，洁污混合底盘，污箱子
+9.10 检查lis标本配送  真实系统呼叫单 022110171604 呼叫正常+配送异常(走的电梯不对)  洁电梯，洁污混合底盘，污箱子  应该走的7号污电梯，目前4号洁电梯
+9.20 确认12楼药房配送点位
+9.33-10.29 退药单 六楼到西药房 28234_202103683 真实呼叫单(有药) 洁电梯，洁污混合底盘，洁箱子  上去走7号污梯，在6楼无门控卡住 下来走4号梯
+10.00 发药合并单（54789,54790） 西药房到12楼  真实呼叫（有药）正常配送 
+11.00 出现问题
+正常情况：提示我在这个路点没有权限
+异常情况
+
+所属园区：江都区滨江人民医院
+单据编号：57601,57602
+单据类型：呼叫/配送/退回
+发生时间：2021-10-25 14:49:39
+反馈用户：黄雨
+问题归属：软件/调度/硬件/其他
+相关设备：web/app/底盘/柜子/梯控/门控/rfid/
+反馈信息：
+标本配送  022110171604 
+呼叫正常+配送异常(走的电梯不对)  
+洁电梯，洁污混合底盘，污箱子  应该走的7号污电梯，目前4号洁电梯
+
+
+一个是否可错发/补发字段 
+reissueState
+    NOT_NEED_REISSUE("不需要补发"),
+    NOT_REISSUE("未补发"),
+    ALREADY_REISSUE("已经补发");
+
+一个自动呼叫任务增加配送目的地字段
+(1)首页的消息列表
+medical/v3/aggregation/notification?
+MEDICAL_PICKUP 呼叫单（只有自动呼叫单才有目标点位） 开始点位 endPosition  目标点位 targetPosition
+MEDICAL_DELIVERY 配送单 开始点位 startPosition 到达点位 endPosition
+
+（2）呼叫任务列表
+medical/v3/order/pickup/list?
+多返回一个 目标点位 targetPosition
+
+0d006b8c-ebaf-4013-8cea-096501182448
+
+
+44f9a079-72da-47e7-b1a4-948a5b719c41
+模版管理
+
+十三
+051486449838
+十二
+051486449821
+
+32去了工厂 
+
+48打标签污
+
+
+10.26
+添加字段：
+ALTER TABLE "hospital_options" ADD "telephone_open" bool;
+ALTER TABLE "hospital_department" ADD "telephone" varchar(255);
+
+
+Hibernate: alter table medical.hospital_department add column telephone varchar(255)
+Hibernate: alter table medical.hospital_options add column telephone_open boolean
+
+10.28
+3.喇叭的通信协议（喇叭配置，绑定科室）
+解决方案：院区开发完成，需要讨论方案
+-通信协议这个交互的解决
+-我们这边发送文字让那边转换成语音播报，还是我们生成语音到阿里云，让硬件播报
+---语音问题（延迟，转换后部署到阿里云需要配置网关
+---通知器处理
+---文本转语音（mp3，tts转）
+---通知器指令（协议）
+-----用那个通知器播放那个文本
+-目前喇叭是直接在radiance平台绑定了点位，我们只用将绑定的点位和科室相同就可以解决科室绑定
+
+
+喇叭重新开发
+1.喇叭默认的语音通知
+2.喇叭触发的时机
+3.每个状态下的喇叭
