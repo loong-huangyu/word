@@ -1,0 +1,88 @@
+医院编码：
+万科云城：wanke
+南方医科大学深圳医院：nanyida，
+南方科技大学医院：nankeda
+徐州坎德拉：xuzhou-candela 
+彭州市人民医院：pz120
+徐州机器人体验馆：xuzhou-robot-experience
+江都区小纪中心卫生院：扬州市江都区小纪中心卫生院
+江都区真武中心卫生院：扬州市江都区真武中心卫生院
+江都区滨江人民医院：扬州市江都区滨江人民医院
+江都妇幼保健院：扬州市江都妇幼保健院
+江都中医院：扬州市江都中医院
+
+扬州市江都区妇幼保健院
+
+encrypt.key
+2HIK)'d&+}iIA0eBz2hMBClWy>9,%(
+
+'
+
+医院编码：
+万科云城：e90d7310-959c-4948-bf09-c67e93600848
+南方医科大学深圳医院：d56c4a26-9adc-4280-bdae-b3d531319491
+南方科技大学医院：cefbcf55-f582-4609-8803-dc4b4f6b3607
+徐州坎德拉：56c65e90-195e-45da-bbef-0a856f40b06e
+彭州市人民医院：3f75f7b4-10af-403d-bdbe-89dae17c6549
+徐州机器人体验馆：ad0aece3-6520-4b2e-b038-4a5b0ddcb57c
+江都区小纪中心卫生院：2b26aafb-00c1-480c-ab96-a65b85dffd87
+江都区真武中心卫生院：0a18321a-d429-41d4-b2a6-761be4103e5d
+江都区滨江人民医院：e460406c-325b-4fc1-b59b-0791ac13b67a
+江都妇幼保健院：77523c75-5cbd-4fcc-b410-03f187c1d537
+江都中医院：7ac4c7b2-7258-406a-b9f7-407a3f87f1f0
+ 
+
+（4）当前需要更新的
+
+天安云谷id：8e530a0b-5eca-4440-a03a-307cb6bb9005
+
+--站点id：88705855
+天安云谷五栋id：e296745d-9873-402e-b1f3-dd6d5b7fc737
+
+--站点id：88705856
+
+
+db.getCollection('logistics_order_trace').createIndex({"orderId":1})
+db.getCollection('delivery_user_address').createIndex({"mobile":1,"houseNumberId":1,"deleted":1})
+
+
+ALTER TABLE "hospital_department" ADD "department_code" int8;
+
+ALTER TABLE "hospital_setting" ADD "pick_up_arrival_wait" int4;
+
+ALTER TABLE "hospital_setting" ADD "rf_id_validate_disabled" bool;
+
+修改字段类型
+ALTER TABLE "hospital_department" ALTER COLUMN "department_code" TYPE int8;
+
+
+https://jumpserver.ctirobot.com/luna/?_=1615951169099
+
+生产：kafka-console-producer.sh --broker-list 172.16.20.194:31980,172.16.20.193:31980,172.16.20.195:31980  --topic queue.status.change 
+
+消费：kafka-console-consumer.sh   --bootstrap-server 172.16.20.194:31980,172.16.20.195:31980,172.16.20.193:31980 --topic queue.status.change  --from-beginning 可查看kafka里的消息
+
+2.25升级
+ALTER TABLE "common_waypoint" ADD "disabled" bool;
+
+ALTER TABLE "hospital_setting" ADD "play_music" bool;
+
+alter table hospital_deparment add clean_base_position_id varchar(255);
+alter table hospital_deparment add dirty_base_position_id varchar(255);
+
+
+
+git rebase release/0.15.x
+git rebase --continue
+git log
+git push -f 
+
+
+
+------
+3.17 新加sql
+INSERT INTO "medical"."saas_zone_authority" ("id", "created_by", "created_time", "deleted", "deleted_by", "deleted_time", "last_modified_by", "last_modified_time", "application_type", "level", "menu_type", "name", "path", "parent_authority_id") VALUES ('a55874ee-45f0-4db5-84b3-cdf494662d04', '0dc8efd2-ead1-4949-9aba-8d0aee23ee4b', 1646624033901, 'f', NULL, NULL, '0dc8efd2-ead1-4949-9aba-8d0aee23ee4b', 1646624033901, 0, 1, 0, '消毒模式', '/sterilization', NULL);
+INSERT INTO "medical"."saas_zone_authority" ("id", "created_by", "created_time", "deleted", "deleted_by", "deleted_time", "last_modified_by", "last_modified_time", "application_type", "level", "menu_type", "name", "path", "parent_authority_id") VALUES ('d42e5862-7b12-424b-a398-423a8b3bdba5', '0dc8efd2-ead1-4949-9aba-8d0aee23ee4b', 1646624072271, 'f', NULL, NULL, '0dc8efd2-ead1-4949-9aba-8d0aee23ee4b', 1646624072271, 0, 1, 0, '配送模式', '/delivery', NULL);
+
+
+ALTER TABLE "hospital_setting" ADD "play_music" bool;

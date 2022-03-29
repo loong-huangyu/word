@@ -1,6 +1,7 @@
 encrypt.key
 2HIK)'d&+}iIA0eBz2hMBClWy>9,%(
 
+'
 8.17 
 派件1687,机器人724，共享160
 
@@ -548,7 +549,7 @@ his系统：61779e51-2bdd-4e32-b852-1144c587c8b8
 
 {
     "createTime": 1634027989999,
-    "endDepartmentId": "5f2b0623-a33c-4bf7-aa77-1f4d9869e568",
+    "endDepartmentId": "1b3d8e75-7de8-417e-93a4-ed15a840337f",
     "endUser": {
         "id": "12332",
         "name": "收货人"
@@ -562,7 +563,7 @@ his系统：61779e51-2bdd-4e32-b852-1144c587c8b8
     ],
     "originId": "5",
     "sourceSystemId": "61779e51-2bdd-4e32-b852-1144c587c8b8",
-    "startDepartmentId": "b4d7dc82-af19-4342-a31e-b4d87c42ec20",
+    "startDepartmentId": "ea3dcf5f-2a5f-4de5-9acb-94513dab3185",
     "startUser": {
         "id": "34345",
         "name": "发货人"
@@ -709,3 +710,355 @@ Hibernate: alter table medical.hospital_options add column telephone_open boolea
 1.喇叭默认的语音通知
 2.喇叭触发的时机
 3.每个状态下的喇叭
+
+
+只给在线状态的底盘和箱体进行推送
+如果晚上没有电了，重新开机，没有收到音量还原的推送怎么办？
+
+
+
+
+ALTER TABLE "hospital_setting" ADD "night_volume_open_time" int8;
+ALTER TABLE "hospital_setting" ADD "night_volume_close_time" int8;
+ALTER TABLE "hospital_setting" ADD "hive_volume" int4;
+ALTER TABLE "hospital_setting" ADD "robot_volume" int4;
+ALTER TABLE "hospital_setting" ADD "gadget_volume" int4;
+
+ALTER TABLE "hospital_setting" ADD "old_gadget_open" bool;
+
+
+医院编码：
+万科云城：wanke
+南方医科大学深圳医院：nanyida，
+南方科技大学医院：nankeda
+徐州坎德拉：xuzhou-candela 
+彭州市人民医院：pz120
+徐州机器人体验馆：xuzhou-robot-experience
+江都区小纪中心卫生院：扬州市江都区小纪中心卫生院
+江都区真武中心卫生院：扬州市江都区真武中心卫生院
+江都区滨江人民医院：扬州市江都区滨江人民医院
+江都妇幼保健院：扬州市江都妇幼保健院
+江都中医院：扬州市江都中医院
+
+orderStateChangedDomainEventListener medicalOrderDo ARRIVED
+
+
+https://api.ctirobot.com/swagger-ui/index.html?urls.primaryName=aurora#/%E5%8C%BB%E7%96%97%E6%8A%A5%E5%91%8A/robotOrderTripTimeAvgUsingGET_1
+
+星期一对接2套统计接口
+
+
+ALTER TABLE "hospital_setting" ADD "telephone_open" bool;
+
+
+CREATE TABLE "saas_abnormal_alarm_template" (
+  "id" varchar(255) COLLATE "pg_catalog"."default" NOT NULL,
+  "created_time" int8,
+  "delay_trigger_time" int4,
+  "disabled" bool,
+  "interval_time" int4,
+  "notification_count" int4,
+  "order_state" varchar(255) COLLATE "pg_catalog"."default",
+  "order_type" varchar(255) COLLATE "pg_catalog"."default",
+  CONSTRAINT "saas_abnormal_alarm_template_pkey" PRIMARY KEY ("id")
+)
+;
+
+ALTER TABLE "saas_abnormal_alarm_template" 
+  OWNER TO "ctirobot";
+
+
+    @Mappings({
+        @Mapping(source = "startPosition.name", target = "startPositionName"),
+        @Mapping(source = "endPosition.name", target = "endPositionName"),
+        @Mapping(source = "itemType.name", target = "itemTypeName")
+    })
+
+
+DISCARD_HIVE  
+DISCARD_DEPARTMENT
+DISCARD_NONE
+
+
+ipadTopic: "/medicalIpadTopic-staging/"
+
+startName
+endName
+targetName
+time
+
+
+{
+  "count": 3,
+  "disabled": false,
+  "endPositionId": "059d6d31-ccbc-441a-9edf-74f08088f47a",
+  "fixedName": "DT-003",
+  "fixedNumber": "DT-003",
+  "itemTypeId": "e63c7c59-57e7-42e8-be80-f92421a5acc8",
+  "lockerCount": 1,
+  "lockerSize": "EXTRA_LARGE",
+  "startPositionId": "34eddc49-76dc-4cf4-be66-4479b12c14c7",
+  "triggerTime": 57900000,
+  "zoneId": "e90d7310-959c-4948-bf09-c67e93600848"
+}
+
+
+-Xmx750m
+-Xms128m
+-XX:ReservedCodeCacheSize=512m
+-XX:+UseG1GC
+-XX:SoftRefLRUPolicyMSPerMB=50
+-XX:CICompilerCount=2
+-XX:+HeapDumpOnOutOfMemoryError
+-XX:-OmitStackTraceInFastThrow
+-ea
+-Dsun.io.useCanonCaches=false
+-Djdk.http.auth.tunneling.disabledSchemes=""
+-Djdk.attach.allowAttachSelf=true
+-Djdk.module.illegalAccess.silent=true
+-Dkotlinx.coroutines.debug=off
+-XX:ErrorFile=$USER_HOME/java_error_in_idea_%p.log
+-XX:HeapDumpPath=$USER_HOME/java_error_in_idea.hprof
+
+
+1.医生删除医嘱，有状态限制吗
+医生签名前可删除，签名后发送前可停止/取消，
+
+--医嘱反悔和精麻毒的配送
+
+2.医生取消医嘱，撤销取消医嘱，停止医嘱，取消停止这几个按钮分别有什么区别
+
+
+3.护士长校对签名，是根据当前状态来执行不同逻辑的吗，比如当前是医生刚刚下发的医嘱，护士长“校对签名”此时状态会变成“已汇总”，当医生取消医嘱，护士长（粉红色的医嘱单）再“校对签名”此时药品信息会消失；
+
+4.药房已经“发药”，药品信息状态会变为“已执行”，此时医生还能删除/停止/取消医嘱吗
+
+5.药房“发药”时需要获取每个物品所属患者的住院号，这个可以拿到吗
+
+     * 午休音量开启时间
+     */
+    var noonVolumeOpenTime: Long? = 0
+
+    /**
+     * 午休音量结束时间
+     */
+    var noonVolumeCloseTime: Long? = 0
+
+    /**
+     * 控制午休夜间喇叭音量
+     */
+    var controlVolume: Boolean? = true
+
+warningElectricity
+
+    ALTER TABLE "hospital_setting" ADD "noon_volume_open_time" int8;
+
+    ALTER TABLE "hospital_setting" ADD "warningElectricity" int4;
+
+    ALTER TABLE "hospital_setting" ADD "control_volume" bool;
+
+    alter table medical.common_waypoint add column waypoint_type int4
+    alter table medical.hospital_setting add column rf_id_loss_check_interval_time int4
+
+
+    https://staging.api.ctirobot.com/api/map/v1/hub/e90d7310-959c-4948-bf09-c67e93600848
+
+
+    ALTER TABLE "medical"."hospital_setting" ADD "warning_electricity" int4;
+    UPDATE "medical"."hospital_setting" SET "warning_electricity" = 15;
+
+
+    医院编码：
+万科云城：e90d7310-959c-4948-bf09-c67e93600848
+南方医科大学深圳医院：d56c4a26-9adc-4280-bdae-b3d531319491
+南方科技大学医院：cefbcf55-f582-4609-8803-dc4b4f6b3607
+徐州坎德拉：56c65e90-195e-45da-bbef-0a856f40b06e
+彭州市人民医院：3f75f7b4-10af-403d-bdbe-89dae17c6549
+徐州机器人体验馆：ad0aece3-6520-4b2e-b038-4a5b0ddcb57c
+江都区小纪中心卫生院：2b26aafb-00c1-480c-ab96-a65b85dffd87
+江都区真武中心卫生院：0a18321a-d429-41d4-b2a6-761be4103e5d
+江都区滨江人民医院：e460406c-325b-4fc1-b59b-0791ac13b67a
+江都妇幼保健院：77523c75-5cbd-4fcc-b410-03f187c1d537
+江都中医院：7ac4c7b2-7258-406a-b9f7-407a3f87f1f0
+
+
+
+HospitalPriorityApplication
+
+
+发往${endDepartment}科室的机器人已到达，请及时装货！
+发往{1}科室的机器人已到达，请及时装货！
+发往输1科室的机器人已到达，请及时装货！
+
+9.45
+10.30
+
+-----------------------------
+门诊科室
+主要点：值班时间，急症
+
+住院临床科室  3班倒  
+
+机器人场景主要适应于住院和急症
+
+医技科室 配送
+
+
+医辅类科室
+
+行政后勤（暂时未对接）
+
+时效性
+
+
+长期医嘱（量大）  临时医嘱（量小）
+
+主动退药要护士长确认
+
+普通药房和急症药房 不同时间去不同的点   科室对照不同科室以及时间段
+
+体检中心和病房晨间（标本检验）（卫生院目前没有贴标签）          优先级功能
+
+
+病理标本 （手术室、妇科主要，胃镜肠镜，手术室）
+
+
+小件物质配送
+
+
+器械包清洗（标签，确定合格）    追溯性要高，单个包，不能丢失污染
+门诊有上班时间限制，病区没有限制
+一般小地方都是早上送完或者下午送一次
+南医大需要夜间值班
+物质洁污性特别关注
+
+大厂一级库
+职能二级库
+科室二级库
+手术室三级库
+
+二级库可以相互交流数据 可走退库
+
+spd 
+
+高值耗材需要（使用才付钱）
+
+被服 清洗外包，医院内只有存储间     主要配送清洁被服
+
+医疗垃圾有追溯重量
+
+------------------------------------------
+呼叫配送 自动手动   web触发 app触发
+
+
+
+私有化部署
+
+科室优先级存在问题
+
+4416，4427，4426
+
+
+com.cti.service.medical.order.delivery.application.RadianceApplication#returnOrder
+
+bugfix  not Position
+
+
+
+SELECT
+	spz.* 
+FROM
+	saas_platform_zone spz
+	RIGHT JOIN saas_tenant_account_zone staz ON staz.zone_id = spz.
+	ID LEFT JOIN saas_tenant_account sta ON sta.id = staz.tenant_account_id
+WHERE
+ sta.tenant_id = 'c8a4f457-cfed-4953-b736-2bb6db9d0873'
+ AND sta.deleted = FALSE
+ AND spz.deleted = FALSE
+ AND (spz.name LIKE '%万科%' or spz.zone_code LIKE '%万科%')
+
+
+ 固定任务+生产错误紧急发包
+
+周四
+ 固定任务提测
+ 生产问题跟踪
+ 写南医大文档
+ 消息模版开发
+周五
+对接众阳
+周六
+对接众阳
+处理线上问题
+
+
+
+固定任务提测
+消息模版提测
+修复测试环境语音
+物品分类优化
+
+1.处理滨江医院的部署问题
+2.物品分类优化提测
+3.科室管理优化
+4.接入商管理
+
+1.科室管理优化提测
+2.bug修复
+
+1.bug修复
+2.上线文档
+3.上线医疗版本
+
+1.评审需求
+2.拆解需求
+
+
+----------------------------
+{positionName}
+{gadgetName}
+{startDepartmentName}
+{endDepartmentName}
+{itemTypeName}
+{departmentName}
+{fixedName}
+{specialRobotName}
+{tagName}
+{hiveName}
+
+
+
+
+--------
+线上问题解决
+专机专柜配送上线
+途径点功能测试
+
+manual
+
+
+---
+闪光本地化
+地图和电梯都可以不用
+地图下发 mqtt推送更新 机器获取http
+（地图更新，任务更新，）
+定时任务触发，推送（定时的时间计算？？？？？（整个任务的下发，启动的时间由机器人控制），导致产生）
+
+扫图只能是wifi 然后通过app上传到云端
+
+**---
+明天对接（）
+电梯管理  
+电梯管理参数，配置推送到吴总和机器人
+
+定时任务展示
+
+设备升级需要的指令（重新对接）
+
+
+机器人状态展示（历史记录也需要）
+
+设备认证
+
+
+
