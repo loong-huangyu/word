@@ -116,7 +116,7 @@
                 <mxCell id="65" value="" style="edgeStyle=none;html=1;" parent="1" source="39" target="64" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="39" value="召回订单回到起点（先创建运输单（A-B），在取消召回单）" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                <mxCell id="39" value="召回订单回到起点（先创建运输单（A-B），在签收召回单）" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="310" y="830" width="120" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="56" value="" style="edgeStyle=none;html=1;" parent="1" source="41" target="55" edge="1">
@@ -167,7 +167,7 @@
                 <mxCell id="66" value="获取当前柜子的召回逻辑" style="whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
                     <mxGeometry x="100" y="720" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="68" value="已确认状态怎么处理" style="whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+                <mxCell id="68" value="已确认状态怎么处理" style="whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
                     <mxGeometry x="770" y="120" width="120" height="60" as="geometry"/>
                 </mxCell>
             </root>

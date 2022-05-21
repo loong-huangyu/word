@@ -1059,6 +1059,122 @@ manual
 机器人状态展示（历史记录也需要）
 
 设备认证
+-------------------------------
+机器人最开始设置在那个园区？---坎德拉
+换绑是值有指定绑定的地方可以换绑？ --- 坎德拉到企业没有校验 ，校验只能企业内换绑
+机器人的创建时间是值进入选择园区的第一次的时间吗？ -- 添加时间
+
+机器人WIfi连接怎么获取？
 
 
 
+----
+对接导航
+1.机器人状态
+2.清洁面积
+3.剩余电量
+4.清洁时间
+5.机器人位置
+6.机器人水量
+
+机器人的离线判断时间
+
+------------
+
+1.设备能提供给哪些字段 那个属性唯一值 ，通过那种方式对接
+2.导航需要平台提供哪些字段 ，通过什么方式对接
+
+任务上报指令回传
+
+需要添加：
+机器人版本信息
+时间戳
+
+
+机器人状态：state
+机器人行为：behaviour
+机器人动作：action
+
+
+{
+    "id":"设备id",
+    "type":"设备类型",
+    "state":"设备状态",
+    "electricity":"剩余电量",
+    "location":"机器人位置",
+    "saveWater":"机器人水量",
+    "upadteTime":"更新的时间戳"
+}
+
+
+mqtt  遗言
+
+
+于总电梯的参数对接
+设备状态对接5月6号
+
+---
+账户
+
+自取短信
+您的包裹{1}已到达山竺驿站，请您凭{2}取件，详询{3}，谢谢！
+【山竺科技】您的包裹YT438720220511006已到达山竺驿站，请您凭11A0003取件，详询18838202833，谢谢！
+
+一格一件到达取件点
+您的快递已到达{1}，请您凭{2}在3分钟内取件，详询：{3}
+【山竺科技】您的快递已到达7栋B座/26楼/产品中心，请您凭03136017在3分钟内取件，详询：18838202833
+
+一格多件到达取件点
+您的快递已到达{1} {2}，请您凭{3}在3分钟内取件，详询：{4}
+【山竺科技】您的快递已到达7栋B座/26楼/产品中心 2003,2004，请您凭71667299在3分钟内取件，详询：18838202833
+
+
+整理block的所有触发点
+
+
+1.是否跳过本轮 tryBypassProcessing
+TrySkipExecute
+
+2.在阻塞之前是否可以释放 柜子和底盘 （请求前判断 柜子可用 和 底盘可用） attemptRobotEarlyRelease
+RobotReleaseDomainService。attemptRobotEarlyRelease
+
+3.阻塞（结束本轮请求）TransitRequest.block
+
+4.解除阻塞事件 TransitRequest.unsetBlockEvent
+
+锁发起的地方
+跳过本轮等过了30s后如何处理
+
+126-15-12-2
+98
+
+记录所有的阻塞和取消阻塞的事件
+
+SchedulingEvent.NO_PATH_AVAILABLE(路径规划失败),
+SchedulingEvent.NO_LIFT_AVAILABLE(无可用电梯),
+SchedulingEvent.NOT_OPERATION_TIME(非运营时间),
+SchedulingEvent.HIVE_ROBOT_NOT_SUITABLE(底盘不满足调度要求),
+SchedulingEvent.NO_DOCK_AVAILABLE(无可用桩位),
+SchedulingEvent.ROBOT_NOT_TOP_OF_STACK(底盘车位非栈顶),
+SchedulingEvent.HIVE_NOT_TOP_OF_STACK(柜体非栈顶),
+SchedulingEvent.POST_ARRIVAL_WAIT(配送到达后等待),
+SchedulingEvent.POST_PICK_UP_ARRIVAL_WAIT(上门到达后等待),
+SchedulingEvent.ROBOT_BUSY(底盘处于忙碌状态),
+SchedulingEvent.STATUS_AVOIDANCE(状态避让),
+
+
+
+设备自主
+-自动充电
+-自动返航
+-自主乘梯
+-交通管制
+
+和现在的交互冲突
+
+
+星期一前完成阻塞，星期二完成调度请求
+
+调度请求需要拆分，在上门请求之前的请求暂时不用管，上门之后的都要实现
+
+底盘选择问题 没有可以选择底盘的定时

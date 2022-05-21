@@ -1,0 +1,37 @@
+[
+    {
+        "deviceStatus": "INITIALIZATION",
+        "waypointId":"47440f10-2670-4fad-b981-ee112bc86b9a",
+        "percentage": 98 ,
+        "cleanPercentage": 98 ,
+        "sewagePercentage": 0
+    },
+    {
+        "deviceStatus": "NEED_LOCATION",
+        "waypointId":"4bd5db54-e164-4cfc-bd8f-1096a90ea089",
+        "percentage": 90 ,
+        "cleanPercentage": 89 ,
+        "sewagePercentage": 7
+    },
+    {
+        "deviceStatus": "IDLE",
+        "waypointId":"47440f10-2670-4fad-b981-ee112bc86b9a",
+        "percentage": 80 ,
+        "cleanPercentage": 79 ,
+        "sewagePercentage": 15
+    },
+    {
+        "deviceStatus": "WORK",
+        "waypointId":"4bd5db54-e164-4cfc-bd8f-1096a90ea089",
+        "percentage": 70 ,
+        "cleanPercentage": 69 ,
+        "sewagePercentage": 23
+    },
+    {
+        "deviceStatus": "ABNORMAL",
+        "waypointId":"47440f10-2670-4fad-b981-ee112bc86b9a",
+        "percentage": 60 ,
+        "cleanPercentage": 59 ,
+        "sewagePercentage": 30
+    }
+]

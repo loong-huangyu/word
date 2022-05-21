@@ -18,6 +18,22 @@ encrypt.key
 
 '
 
+
+-Dspring.cloud.nacos.discovery.server-addr=127.0.0.1:8848 -Dspring.cloud.nacos.config.server-addr=192.168.100.66:8858
+
+docker pull nacos/nacos-server:2.0.4
+
+docker run --name nacos -d -p 8848:8848  -p 9848:9848 -p 9849:9849 --privileged=true --restart=always -e JVM_XMS=256m -e JVM_XMX=256m -e MODE=standalone -e PREFER_HOST_MODE=hostname  -v /Users/cti/soft/docker/nacos/application.properties:/d/docker/nacos/conf/application.properties nacos/nacos-server
+
+领域建模
+领域事件
+事件驱动
+状态机
+领域服务
+业务边界
+
+
+
 医院编码：
 万科云城：e90d7310-959c-4948-bf09-c67e93600848
 南方医科大学深圳医院：d56c4a26-9adc-4280-bdae-b3d531319491
@@ -62,6 +78,8 @@ https://jumpserver.ctirobot.com/luna/?_=1615951169099
 
 消费：kafka-console-consumer.sh   --bootstrap-server 172.16.20.194:31980,172.16.20.195:31980,172.16.20.193:31980 --topic queue.status.change  --from-beginning 可查看kafka里的消息
 
+
+
 2.25升级
 ALTER TABLE "common_waypoint" ADD "disabled" bool;
 
@@ -86,3 +104,130 @@ INSERT INTO "medical"."saas_zone_authority" ("id", "created_by", "created_time",
 
 
 ALTER TABLE "hospital_setting" ADD "play_music" bool;
+
+
+db.getCollection("transitRequest").createIndex({
+    expiryTime: NumberInt("1")
+}, {
+    name: "expiryTime",
+    background: true,
+    sparse: true,
+    expireAfterSeconds: NumberInt("1")
+});
+
+db.getCollection("transitRequestHistory").createIndex({
+    expiryTime: NumberInt("1")
+}, {
+    name: "expiryTime",
+    background: true,
+    sparse: true,
+    expireAfterSeconds: NumberInt("1")
+});
+
+
+kafka  :
+状态上报
+group: mqtt-cleaning-consumer-group
+destination: mqtt-cleaning-status-update-development
+
+指令上报
+group: mqtt-cleaning-consumer-group
+destination: mqtt-cleaning-command-update-development
+
+任务上报
+group: mqtt-cleaning-consumer-group
+destination: mqtt-cleaning-task-status-update-development
+
+
+mqtt
+状态上报topic: cleaning-device-status-update-development
+指令上报topic:  cleaning-command-update-development  
+任务上报topci：cleaning-task-status-update-development
+
+
+指令下发topic: cleaning-command-development  
+
+
+
+kafka  :
+状态上报
+group: mqtt-cleaning-consumer-group
+destination: mqtt-cleaning-status-update-staging
+
+指令上报
+group: mqtt-cleaning-consumer-group
+destination: mqtt-cleaning-command-update-staging
+
+任务上报
+group: mqtt-cleaning-consumer-group
+destination: mqtt-cleaning-task-status-update-staging
+
+
+mqtt
+状态上报topic: cleaning-device-status-update-staging
+指令上报topic:  cleaning-command-update-staging  
+任务上报topci：cleaning-task-status-update-staging
+
+
+指令下发topic: cleaning-command-staging
+
+-staging
+
+
+kafka-console-producer.sh --broker-list 172.168.201.27:30179,172.168.201.28:30179,172.168.201.29:30179  --topic mqtt-cleaning-status-update-development {"id":"049149ea-0461-4dcc-80b9-e946fd3cb895","deviceType":"ROBOT","deviceStatus":"INITIALIZATION","deviceBehaviour":"SELF_CHECK","timestamp":"7498327437965","parkId":"3244f85e-07a7-41f2-8daf-8d15edc6346f"}
+
+
+kafka-console-producer.sh --broker-list 120.78.237.140:9092  --topic mqtt-cleaning-status-update-development {"id":"049149ea-0461-4dcc-80b9-e946fd3cb895","deviceType":"CLEANING_ROBOT","deviceStatus":"INITIALIZATION","deviceBehaviour":"SELF_CHECK","timestamp":"7498327437965","parkId":"3244f85e-07a7-41f2-8daf-8d15edc6346f"}
+
+
+
+kafka-console-consumer.sh   --bootstrap-server 172.168.201.27:30179,172.168.201.28:30179,172.168.201.29:30179 --topic mqtt-cleaning-status-update-development  --from-beginning
+
+
+
+
+生产：kafka-console-producer.sh --broker-l ist 172.16.20.194:31980,172.16.20.193:31980,172.16.20.195:31980  --topic mqtt-cleaning-status-update-staging
+
+消费：kafka-console-consumer.sh   --bootstrap-server 172.16.20.194:31980,172.16.20.195:31980,172.16.20.193:31980 --topic mqtt-cleaning-status-update-staging  --from-beginning
+
+{"apiKey":"service-client","keyType":"MASTER","entityId":"cleaning-platform","readOnly":false,"activated":true,"deleted":false}
+
+{"apiKey":"service-client","keyType":"MASTER","entityId":"medical-service","readOnly":false,"activated":true,"deleted":false}
+
+
+
+
+
+4.13
+SecurityContextHolder 获取当前token
+RequestContextHolder 获取当前token
+账户在3方创建后到uaa的注册场景
+AOTH2
+/oauth/token
+重写token获取
+自定义设备token的获取
+主要的2个步骤：
+1.TokenEndpoint-》CompositeTokenGranter-》AbstractTokenGranter
+2.grant_type = "device" 用grant_type去进行处理对象选择后，再去校验数据生成token
+
+4.14
+账户登陆后修改密码，解析自定义注解@Authorized和服务间访问token请求访问uaa和gateway新老版本的区别，
+
+4.15
+MQTT和消息队列的区别#
+消息队列可以存储消息，直到被消费为止
+
+消息队列只能被消费处理一次，不像MQTT订阅的人都可以收到消息
+
+消息队列需要先创建队列，MQTT可以使用时候创建
+
+MQTT是一种通信协议，MQ是消息通道
+
+MQTT面向海量设备连接、MQ是面向海量数据
+
+cap理论
+1.满足CA舍弃P,也就是满足一致性和可用性,舍弃容错性。但是这也就意味着你的系统不是分布式的了,因为涉及分布式的想法就是把功能分开,部署到不同的机器上。
+2.满足CP舍弃A,也就是满足一致性和容错性,舍弃可用性。如果你的系统允许有段时间的访问失效等问题,这个是可以满足的。就好比多个人并发买票,后台网络出现故障,你买的时候系统就崩溃了。
+3.满足AP舍弃C,也就是满足可用性和容错性,舍弃一致性。这也就是意味着你的系统在并发访问的时候可能会出现数据不一致的情况。
+
+expireAfterSeconds

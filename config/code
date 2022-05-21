@@ -1,0 +1,28 @@
+生产环境 kubenetes 集群内部mqtt访问地址：emqx.middleware.svc:1883
+username: ctirobot
+password: hzm17pKV~^Ee2KTHm2cpAo~5
+
+预发布 k8s 集群内部连接地址： emqx.kafka.svc:1883
+
+
+
+
+CREATE TABLE "cleaning_platform"."business_account" (
+  "id" varchar(255) COLLATE "pg_catalog"."default" NOT NULL,
+  "avatar" varchar(255) COLLATE "pg_catalog"."default",
+  "business_id" varchar(255) COLLATE "pg_catalog"."default",
+  "created_time" int8,
+  "deleted" bool NOT NULL,
+  "description" varchar(255) COLLATE "pg_catalog"."default",
+  "disabled" bool NOT NULL,
+  "email" varchar(255) COLLATE "pg_catalog"."default",
+  "mobile" varchar(255) COLLATE "pg_catalog"."default",
+  "name" varchar(255) COLLATE "pg_catalog"."default",
+  "require_change_password" bool NOT NULL,
+  "username" varchar(255) COLLATE "pg_catalog"."default",
+  CONSTRAINT "business_account_pkey" PRIMARY KEY ("id")
+)
+;
+
+ALTER TABLE "cleaning_platform"."business_account" 
+  OWNER TO "ctirobot";
