@@ -18,7 +18,7 @@ encrypt.key
 
 '
 
-
+-Xms200m -Xmx400m -XX:+HeapDumpOnOutOfMemoryError
 -Dspring.cloud.nacos.discovery.server-addr=127.0.0.1:8848 -Dspring.cloud.nacos.config.server-addr=192.168.100.66:8858
 
 docker pull nacos/nacos-server:2.0.4
@@ -78,7 +78,13 @@ https://jumpserver.ctirobot.com/luna/?_=1615951169099
 
 消费：kafka-console-consumer.sh   --bootstrap-server 172.16.20.194:31980,172.16.20.195:31980,172.16.20.193:31980 --topic queue.status.change  --from-beginning 可查看kafka里的消息
 
+kafka-console-producer.sh --broker-list kafka-1.kafka-headless.middleware.svc.company-schedulev2-cluster:9092 --topic mqtt-status-update-development
 
+kafka-console-consumer.sh --bootstrap-server kafka.middleware.svc.company-schedulev2-cluster:9092 --topic mqtt-status-update-development --from-beginning
+
+kafka-console-producer.sh --broker-list kafka-1.kafka-headless.middleware.svc.company-schedulev2-cluster:9092 --topic mqtt-status-update-development
+
+queue.command.notify
 
 2.25升级
 ALTER TABLE "common_waypoint" ADD "disabled" bool;
@@ -195,7 +201,12 @@ kafka-console-consumer.sh   --bootstrap-server 172.168.201.27:30179,172.168.201.
 {"apiKey":"service-client","keyType":"MASTER","entityId":"medical-service","readOnly":false,"activated":true,"deleted":false}
 
 
-
+@NotNull
+适用于基本数据类型(Integer，Long，Double等等)，当 @NotNull 注解被使用在 String 类型的数据上，则表示该数据不能为 Null（但是可以为 Empty）
+@NotBlank
+适用于 String 类型的数据上，加了@NotBlank 注解的参数不能为 Null 且 trim() 之后 size > 0
+@NotEmpty
+适用于 String、Collection集合、Map、数组等等，加了@NotEmpty 注解的参数不能为 Null 或者 长度为 0
 
 
 4.13
@@ -230,4 +241,10 @@ cap理论
 2.满足CP舍弃A,也就是满足一致性和容错性,舍弃可用性。如果你的系统允许有段时间的访问失效等问题,这个是可以满足的。就好比多个人并发买票,后台网络出现故障,你买的时候系统就崩溃了。
 3.满足AP舍弃C,也就是满足可用性和容错性,舍弃一致性。这也就是意味着你的系统在并发访问的时候可能会出现数据不一致的情况。
 
-expireAfterSeconds
+死信的几种来源：
+消息 TTL 过期（time to live，存活时间，可以用在限时支付消息）
+队列达到最大长度（队列满了，无法路由到该队列）
+消息被拒绝（ basic.reject / basic.nack ），并且 requeue = false
+
+阻塞队列：
+用来做生产和消费
