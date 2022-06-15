@@ -284,7 +284,7 @@
                 <mxCell id="111" value="跳过检查间隔10s" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
                     <mxGeometry x="2165" y="840" width="110" height="20" as="geometry"/>
                 </mxCell>
-                <mxCell id="112" value="定时任务&amp;nbsp;&lt;br&gt;订单找柜子&lt;br&gt;请求找底盘&lt;br&gt;请求创建&lt;br&gt;树触发" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                <mxCell id="112" value="定时任务&amp;nbsp;&lt;br&gt;订单找柜子&lt;br&gt;请求找底盘&lt;br&gt;请求创建&lt;br&gt;树触发" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
                     <mxGeometry x="320" y="30" width="80" height="80" as="geometry"/>
                 </mxCell>
             </root>
