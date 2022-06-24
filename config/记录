@@ -1232,6 +1232,7 @@ spring:
 完成设备的之间的对接交付
 
 
+
 OpenSendEventListener
 
 
@@ -1248,7 +1249,6 @@ OpenSendEventListener
     0.0,
     0.1
   ]
-
 
 
 
