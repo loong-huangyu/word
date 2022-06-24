@@ -1,0 +1,27 @@
+# 设置本镜像需要使用的基础镜像
+FROM openjdk:8u302-jdk
+
+# environment setting
+ENV JAVA_OPTS="-Xms256M -Xmx1024M -Duser.timezone=Asia/Shanghai"
+
+WORKDIR /home/data/app
+
+# 设置时区
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+RUN echo 'Asia/Shanghai' > /etc/timezone
+
+# 把jar包添加到镜像中
+ADD medical-front-end-0.0.1-SNAPSHOT.jar /home/data/app
+
+# 镜像暴露的端口
+EXPOSE 9002
+
+# 容器启动命令
+ENTRYPOINT [ "/bin/sh", "-c", "java -Dspring.profiles.active=test $JAVA_OPTS -jar /home/data/app/medical-front-end-0.0.1-SNAPSHOT.jar"]
+
+
+##构建镜像
+##docker build -t medical-service:1.0.0 -f Dockerfile .
+
+##启动镜像
+##docker run -d --restart=always --name medical-front -p 9002:9002 medical-service:1.0.0

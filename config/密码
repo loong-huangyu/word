@@ -250,5 +250,8 @@ cap理论
 阻塞队列：
 用来做生产和消费
 
+  k8s api server
+
+  apollo
 
 
