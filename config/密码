@@ -250,8 +250,24 @@ cap理论
 阻塞队列：
 用来做生产和消费
 
-  k8s api server
+REPLICA IDENTITY，复制标识，共有4种配置模式，分别为，
+(1) 默认模式(default)：非系统表采用的默认模式，如果有主键，则用主键列作为身份标识，否则用完整模式。
+(2) 索引模式(index)：将某一个符合条件的索引中的列，用作身份标识。
+(3) 完整模式(full)：将整行记录中的所有列作为复制标识(类似于整个表上每一列共同组成主键)。
+(4) 无身份模式(nothing)：不记录任何复制标识，这意味着UPDATE|DELETE操作无法复制到订阅者上。
+具体有四种形式，
+(1) 使用主键，如果没有主键则为FULL，
+ALTER TABLE t_normal REPLICA IDENTITY DEFAULT;
+(2) 使用整行作为标识，
+ALTER TABLE t_normal REPLICA IDENTITY FULL;
+(3) 使用唯一索引，
+ALTER TABLE t_normal REPLICA IDENTITY USING INDEX t_normal_v_key;
+(4) 不设置复制标识，
+ALTER TABLE t_normal REPLICA IDENTITY NOTHING;
 
-  apollo
+动态代理的根据实现方式的不同可以分为 JDK 动态代理和 CGlib 动态代理。
+JDK 动态代理：利用反射机制生成一个实现代理接口的类，在调用具体方法前调用InvokeHandler来处理。
+CGlib 动态代理：利用ASM（开源的Java字节码编辑库，操作字节码）开源包，将代理对象类的class文件加载进来，通过修改其字节码生成子类来处理。
+区别：JDK代理只能对实现接口的类生成代理；CGlib是针对类实现代理，对指定的类生成一个子类，并覆盖其中的方法，这种通过继承类的实现方式，不能代理final修饰的类。
 
 
